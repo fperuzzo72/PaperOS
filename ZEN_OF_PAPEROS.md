@@ -1,1 +1,3 @@
-TODO: Import Zen of PaperOS.
+# Zen of PaperOS
+
+(To be imported.)

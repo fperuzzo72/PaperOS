@@ -1,1 +1,3 @@
-TODO: Consolidate principles.
+# Project Principles
+
+(To be consolidated from manifesto.)
