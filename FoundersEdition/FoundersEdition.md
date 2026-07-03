@@ -1,3 +1,5 @@
+# PaperOS Founder's Edition
+
 Chapter 1 — The Notebook That Never Existed
 
 “PaperOS is not designed to help you use a computer.
@@ -1777,3 +1779,7 @@ The best computer is not the one that hides itself completely.
 
 It is the one that remains understandable to those who wish to look a
 little deeper.
+
+
+---
+

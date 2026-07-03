@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Future Pandoc build"
+echo Build

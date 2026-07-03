@@ -1,2 +1,2 @@
 all:
-	@echo Building Founder's Edition...
+	@echo 'Pandoc build (coming soon)'

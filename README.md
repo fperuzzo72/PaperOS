@@ -1,9 +1,14 @@
 # PaperOS
 
-Official repository for the PaperOS project.
+A calm computing environment focused on thinking.
+
+## Repository layout
+
+- FoundersEdition/
+- docs/
+- media/
+- scripts/
 
 ## Build
 
-```bash
-make
-```
+Future releases will use Pandoc to generate PDF, EPUB, HTML and DOCX.
