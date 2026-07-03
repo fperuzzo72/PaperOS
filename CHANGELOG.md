@@ -1,4 +1,1 @@
 # Changelog
-
-## Unreleased
-- Initial scaffold.
