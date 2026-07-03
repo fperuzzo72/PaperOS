@@ -1,7 +1,30 @@
-# Next Steps
+# Editorial Roadmap
 
-1. Complete all missing chapters.
-2. Review every existing chapter for consistent style.
-3. Build the first complete Founder's Edition.
-4. Add bibliography, glossary and index.
-5. Automate publication with Pandoc and GitHub Actions.
+Immediate priorities
+
+1. Complete the philosophical chapters:
+   - Ownership ✓
+   - Longevity
+   - Open Formats
+   - Hardware Independence
+
+2. Complete the historical chapters:
+   - MSX
+   - Sinclair
+   - Commodore 64
+   - MS-DOS
+   - Macintosh
+   - Amiga
+   - UNIX
+   - WordStar
+   - Turbo Pascal
+
+3. Complete Part IV (Architecture)
+
+4. Write:
+   - Preface
+   - Bibliography
+   - Glossary
+   - Epilogue
+
+5. Publish Founder's Edition v1.0
