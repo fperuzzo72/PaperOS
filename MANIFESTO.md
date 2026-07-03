@@ -1,0 +1,3 @@
+# PaperOS Manifesto
+
+Draft.

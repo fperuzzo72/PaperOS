@@ -1,2 +1,3 @@
 # PaperOS
-Inspired by paper. Built for thought.
+
+> *Inspired by paper. Built for thought.*
