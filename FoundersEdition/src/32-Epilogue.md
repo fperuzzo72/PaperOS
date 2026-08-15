@@ -40,24 +40,29 @@ further than any single company ever could, even when the country
 writing most of the history books declined to notice. A Sinclair
 machine stripped down to almost nothing that still opened a door wide
 enough for an entire industry to walk through. A filesystem that told
-the truth about where files lived. A graphical interface that kept its
-promises consistently enough to become muscle memory. A machine ahead
-of its time that a company still managed to lose. An operating system
-rewritten in a portable language, given away to universities almost by
-accident, that outlived every business built on top of it. A word
-processor a novelist still trusts today, decades after everyone else
-moved on. A compiler fast enough to turn hesitation into curiosity.
-Ten different answers to the same underlying question, arrived at
-independently, in different decades, by people who mostly never met
-each other. That much agreement, across that much time, is not a
-coincidence worth dismissing.
+the truth about where files lived. A research lab that invented the
+desktop before anyone knew to want one, and shipped almost none of it
+itself. A graphical interface that kept its promises consistently
+enough to become muscle memory. A machine ahead of its time that a
+company still managed to lose. An operating system rewritten in a
+portable language, given away to universities almost by accident, that
+outlived every business built on top of it. A word processor a
+novelist still trusts today, decades after everyone else moved on. A
+compiler fast enough to turn hesitation into curiosity. A handheld
+that succeeded by asking less of handwriting recognition, not more. A
+display technology patient enough to finally stop asking to be called
+a screen. Thirteen different answers to the same underlying question,
+arrived at independently, across different decades, by people who
+mostly never met each other. That much agreement, across that much
+time, is not a coincidence worth dismissing.
 
 ------------------------------------------------------------------------
 
-PaperOS does not claim to be the eleventh answer, better than the ten
-before it. It claims something smaller, and offers it honestly: an
-attempt to hold all ten lessons at once, inside one coherent piece of
-software, without losing any of them to the next redesign.
+PaperOS does not claim to be the fourteenth answer, better than the
+thirteen before it. It claims something smaller, and offers it
+honestly: an attempt to hold all thirteen lessons at once, inside one
+coherent piece of software, without losing any of them to the next
+redesign.
 
 A computer built this way will not compete for anyone’s attention,
 because it was never built to win that competition. It will not

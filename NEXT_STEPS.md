@@ -23,25 +23,25 @@ Immediate priorities
      the Sinclair chapter references the 1986 acquisition and flags
      Amstrad as deserving its own chapter)
 
-   Suggested further additions (not yet written, flagged for
-   consideration — all directly relevant to PaperOS's own subject
-   matter, not just general computing nostalgia):
-   - Xerox PARC / Alto — currently only a passing clause in the
-     Macintosh chapter. Arguably deserves its own chapter: the lab
-     that invented the GUI, the mouse, Ethernet and WYSIWYG editing,
-     and shipped almost none of it commercially itself. Good thematic
-     fit — a research-vs-product story, relevant to a project that is
-     itself "the book first, the implementation second."
-   - Palm / Newton — Apple's Newton tried to solve general handwriting
-     recognition and struggled; Palm's Graffiti succeeded by
-     constraining the input alphabet instead. Directly relevant to
-     PaperOS's own stylus/handwriting material in the Calm Computing
-     chapter, and to designing for a small, keyboard-optional device.
-   - E Ink and the first e-readers (E Ink Corporation, MIT Media Lab
-     spinoff, 1997; Sony Librie 2004; Kindle 2007) — the direct
-     hardware lineage PaperOS's own display technology descends from.
-     Would connect Part III straight into Part IV's Rendering and HAL
-     chapters.
+   Three further additions, suggested in the previous pass, are now
+   written and placed for narrative impact rather than tacked onto the
+   end:
+   - Xerox PARC ✓ — placed between MS-DOS and Macintosh, since the
+     Macintosh chapter's whole argument (consistency applied to a
+     borrowed idea) depends on PARC's story landing first. The
+     Macintosh chapter's opening was trimmed to cross-reference PARC
+     instead of re-explaining it.
+   - Palm and Newton ✓ — placed after Turbo Pascal, closing the
+     hardware/software platform chapters before the two additions
+     below and setting up the shift toward PaperOS's own device class.
+   - E Ink ✓ — placed last in Part III, deliberately, as the direct
+     hardware lineage PaperOS's own display descends from — the
+     chapter that hands off straight into Part IV's Rendering and HAL.
+
+   The Chapter 7 introduction's platform tag list and the Epilogue's
+   enumeration paragraph were both updated to include all thirteen
+   sub-chapters in final order (previously only referenced the
+   original ten).
 
    Chapter numbering: Part II-IV chapters are currently unnumbered in
    the source files (only Chapters 1-7 carry numbers, a holdover from

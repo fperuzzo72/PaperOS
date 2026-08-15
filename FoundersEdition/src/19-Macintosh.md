@@ -2,10 +2,9 @@ Macintosh — Consistency as a Promise
 
 On January 24, 1984, Apple introduced a computer built almost entirely
 around an idea it did not invent: that people should point at what
-they mean instead of typing a command to describe it. The graphical
-interface had already been demonstrated years earlier at Xerox PARC,
-on machines called the Alto and the Star, seen by a young Steve Jobs
-on a visit in 1979 that would reroute the rest of his career. The
+they mean instead of typing a command to describe it. The previous
+chapter already told the story of where that idea came from — a
+research lab that built it first and never managed to sell it. The
 Macintosh’s real contribution was not the invention of the desktop
 metaphor. It was the discipline of making that metaphor behave the
 same way everywhere, on every application, without exception.

@@ -1193,19 +1193,31 @@ But because each solved at least one problem with unusual elegance.
 
 The Apple II demonstrated curiosity.
 
-Sinclair demonstrated economy.
+The Commodore 64 demonstrated accessible creativity.
 
 MSX demonstrated the power of an open platform.
 
-The Commodore 64 demonstrated accessible creativity.
+Sinclair demonstrated economy.
 
 MS-DOS demonstrated respect for files.
+
+Xerox PARC demonstrated that an idea can outlive the company that
+failed to sell it.
 
 The Macintosh demonstrated consistency.
 
 The Amiga demonstrated that sophistication need not become complexity.
 
 UNIX demonstrated the enduring strength of small, composable tools.
+
+WordStar demonstrated that muscle memory outlasts fashion.
+
+Turbo Pascal demonstrated that speed itself can teach.
+
+Palm demonstrated the discipline of a smaller, honest problem.
+
+E Ink demonstrated that a screen could finally learn to behave like
+paper.
 
 PaperOS is indebted to all of them.
 
@@ -1636,14 +1648,72 @@ plainness, not less.
 
 ---
 
+Xerox PARC — The Future, Shipped by Someone Else
+
+In December 1979, a young Steve Jobs walked through the Xerox Palo
+Alto Research Center and saw, for perhaps twenty minutes, computing
+that would not exist commercially for another five years. The machine
+was called the Alto, built at PARC starting in 1973, and it already
+had windows, icons, a graphical desktop and a mouse pointing at all of
+it — years before almost anyone outside a handful of research labs had
+reason to imagine a computer could work that way. Xerox never sold the
+Alto. It was a research machine, built by the thousands for internal
+use and a small circle of universities, never once offered to the
+public.
+
+The mouse itself is often, mistakenly, credited to PARC. It was not
+invented there. Douglas Engelbart and Bill English built the first
+working prototype at Stanford Research Institute in 1964, and
+Engelbart demonstrated it to a stunned audience of computer
+professionals in 1968, in a presentation now remembered as the Mother
+of All Demos. What PARC actually did, after English moved there in
+1971, was something almost as important as invention: it took an idea
+that worked in a laboratory demo and turned it into a mechanism
+ordinary hands could use every day, built into a machine meant to sit
+on an ordinary desk.
+
+------------------------------------------------------------------------
+
+PARC’s researchers did not stop at the mouse and the desktop. Robert
+Metcalfe developed Ethernet there in 1973, giving computers a
+practical way to talk to each other over a wire. Charles Simonyi built
+Bravo, the first WYSIWYG word processor, letting a document on screen
+finally look like the document that would come out of a printer — a
+printer that was itself a PARC invention, the first laser printer,
+built a few years earlier by Gary Starkweather. In a single research
+center, across a few remarkable years, nearly every visual convention
+a modern computer still uses was assembled for the first time.
+
+Xerox did eventually try to sell what PARC had built. The Xerox Star,
+released commercially in 1981, carried nearly all of the Alto’s ideas
+into a real product — and priced that product at over sixteen thousand
+dollars for a single workstation, tens of thousands more for a
+complete office system. Almost nobody could justify the expense, and
+the Star failed commercially almost as thoroughly as the Alto had
+succeeded technically. The ideas did not fail. They simply waited for
+someone else, with a lower price and a sharper sense of who the
+customer actually was, to carry them the rest of the way.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+An idea can be entirely correct and still arrive at the wrong price, in
+the wrong package, from the wrong company, and go nowhere. PARC is
+proof that being first is not the same as being remembered as first,
+and that research worth doing is worth doing even when the company
+funding it never manages to sell what it found.
+
+
+---
+
 Macintosh — Consistency as a Promise
 
 On January 24, 1984, Apple introduced a computer built almost entirely
 around an idea it did not invent: that people should point at what
-they mean instead of typing a command to describe it. The graphical
-interface had already been demonstrated years earlier at Xerox PARC,
-on machines called the Alto and the Star, seen by a young Steve Jobs
-on a visit in 1979 that would reroute the rest of his career. The
+they mean instead of typing a command to describe it. The previous
+chapter already told the story of where that idea came from — a
+research lab that built it first and never managed to sell it. The
 Macintosh’s real contribution was not the invention of the desktop
 metaphor. It was the discipline of making that metaphor behave the
 same way everywhere, on every application, without exception.
@@ -1897,6 +1967,119 @@ costs nothing to discover stops feeling like a risk. PaperOS inherits
 that lesson directly: waiting interrupts thought, as Chapter 4 already
 argued, and Turbo Pascal is proof that removing the wait can turn a
 whole generation of hesitant beginners into confident builders.
+
+
+---
+
+Palm and Newton — Solving a Smaller Problem on Purpose
+
+In 1993, Apple released the Newton MessagePad with one headline
+feature: it would read a person’s handwriting and turn it into text,
+tackling the full, ambitious, genuinely difficult problem of general
+handwriting recognition. It became, almost overnight, a punchline.
+Doonesbury mocked it. The Simpsons mocked it. The recognition
+software, guessing at ordinary cursive from ordinary hands, was wrong
+often enough that the joke wrote itself, and the Newton sold fewer
+than a hundred thousand units in its first year despite an enormous
+marketing push behind it.
+
+Three years later, a small company most people had never heard of
+solved a version of the same problem by making it deliberately
+smaller. Jeff Hawkins, designing the Palm Pilot, looked at what had
+sunk the Newton and made a decision that sounds almost too simple to
+matter: instead of trying to recognize the infinite variety of human
+handwriting, Palm would teach people a small, constrained alphabet of
+its own — Graffiti — close enough to normal letters to learn in
+minutes, simple enough for the device to read correctly almost every
+time. The Palm Pilot launched in 1996 at $299, and sold more than a
+million units in its first eighteen months.
+
+------------------------------------------------------------------------
+
+Nothing about Palm’s underlying technology was more advanced than
+Newton’s. If anything, it was less ambitious by design. The difference
+was that Newton tried to make the machine adapt to every person’s
+handwriting, an open-ended problem no product deadline was ever going
+to fully solve, while Palm asked people to adapt slightly to the
+machine — one narrow, learnable skill, taught once, that then worked
+reliably for as long as anyone used it. The Calm Computing chapter of
+this book already drew a version of this same distinction: cursive
+handwriting engages the mind in ways typing does not, but the exact
+motion matters less than whether the motion, once learned, can be
+trusted to keep working. Graffiti was never trying to be handwriting.
+It was trying to become muscle memory as fast as possible, and it
+succeeded because it accepted a smaller, honest version of the problem
+instead of an impressive, unreliable one.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+The more ambitious solution is not always the more useful one. Newton
+tried to solve handwriting completely and lost people’s trust doing
+it. Palm solved a smaller piece of the same problem and won a
+category. A constraint, chosen honestly and taught clearly, can
+succeed exactly where an open-ended promise fails.
+
+
+---
+
+E Ink — A Screen Willing to Stop Being a Screen
+
+Every display discussed so far in this book, from the Apple II’s
+monitor to the Amiga’s custom video chips, shared one assumption so
+basic it rarely needed stating: a screen is lit from behind or from
+within, and it stays lit for as long as it stays on. That assumption
+is almost exactly what a small company spun out of the MIT Media Lab
+in 1997 set out to break.
+
+E Ink Corporation, founded by Joseph Jacobson, Barrett Comiskey, JD
+Albert and Russ Wilcox, built a display that worked closer to how a
+printed page works than how a television does. Microscopic capsules,
+each holding charged black and white particles, sit inside a thin
+film; a small electric field decides which particles rise to the
+surface and which retreat, and once that decision is made, the display
+asks for no further power to keep it made. A page of E Ink text does
+not glow. It simply reflects room light, the same way ink on paper
+always has, and it can sit displaying the same page for weeks without
+spending a single unit of battery to keep doing it.
+
+------------------------------------------------------------------------
+
+It took years for that invention to reach an actual reader’s hands.
+The first commercial device to use it, the Sony Librie, launched in
+Japan in 2004 after a three-year collaboration between Sony, Philips,
+the printing company Toppan, and E Ink itself — a quiet, modest
+launch, sold only in one country, that most of the world never heard
+about. The device that actually made electronic paper a mainstream
+idea arrived three years later: the Amazon Kindle, released in
+November 2007, built around the same underlying E Ink technology but
+paired with wireless delivery and a bookstore behind it. The screen
+had existed since 2004. It took a company willing to sell the whole
+experience, not just the display, to make the technology matter to
+anyone outside a lab or a niche Japanese release.
+
+------------------------------------------------------------------------
+
+E Ink is not a detour in this book’s history. It is the hardware
+lineage PaperOS’s own first implementation descends from directly, and
+everything Part IV argues about rendering — that a display
+technology’s constraints deserve to be treated honestly rather than
+hidden — traces back to exactly this kind of screen. An E Ink panel
+refreshes slowly, redraws partially, and can visibly ghost the outline
+of whatever was on it a moment before if pushed carelessly. Those are
+not flaws to be engineered away. They are the same trade paper has
+always made, on purpose, in exchange for something television glass
+has never been able to offer: a screen that can sit still, say
+nothing, and cost nothing to keep saying it.
+
+Lesson for PaperOS
+
+A technology does not have to be new to be transformative. E Ink spent
+seven years between its invention and the product that made it
+matter, and what changed in between was never the display. It was
+someone finally building the rest of the experience around what that
+screen was actually good at.
 
 
 ---
@@ -2255,24 +2438,29 @@ further than any single company ever could, even when the country
 writing most of the history books declined to notice. A Sinclair
 machine stripped down to almost nothing that still opened a door wide
 enough for an entire industry to walk through. A filesystem that told
-the truth about where files lived. A graphical interface that kept its
-promises consistently enough to become muscle memory. A machine ahead
-of its time that a company still managed to lose. An operating system
-rewritten in a portable language, given away to universities almost by
-accident, that outlived every business built on top of it. A word
-processor a novelist still trusts today, decades after everyone else
-moved on. A compiler fast enough to turn hesitation into curiosity.
-Ten different answers to the same underlying question, arrived at
-independently, in different decades, by people who mostly never met
-each other. That much agreement, across that much time, is not a
-coincidence worth dismissing.
+the truth about where files lived. A research lab that invented the
+desktop before anyone knew to want one, and shipped almost none of it
+itself. A graphical interface that kept its promises consistently
+enough to become muscle memory. A machine ahead of its time that a
+company still managed to lose. An operating system rewritten in a
+portable language, given away to universities almost by accident, that
+outlived every business built on top of it. A word processor a
+novelist still trusts today, decades after everyone else moved on. A
+compiler fast enough to turn hesitation into curiosity. A handheld
+that succeeded by asking less of handwriting recognition, not more. A
+display technology patient enough to finally stop asking to be called
+a screen. Thirteen different answers to the same underlying question,
+arrived at independently, across different decades, by people who
+mostly never met each other. That much agreement, across that much
+time, is not a coincidence worth dismissing.
 
 ------------------------------------------------------------------------
 
-PaperOS does not claim to be the eleventh answer, better than the ten
-before it. It claims something smaller, and offers it honestly: an
-attempt to hold all ten lessons at once, inside one coherent piece of
-software, without losing any of them to the next redesign.
+PaperOS does not claim to be the fourteenth answer, better than the
+thirteen before it. It claims something smaller, and offers it
+honestly: an attempt to hold all thirteen lessons at once, inside one
+coherent piece of software, without losing any of them to the next
+redesign.
 
 A computer built this way will not compete for anyone’s attention,
 because it was never built to win that competition. It will not

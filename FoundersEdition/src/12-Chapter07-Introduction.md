@@ -139,19 +139,31 @@ But because each solved at least one problem with unusual elegance.
 
 The Apple II demonstrated curiosity.
 
-Sinclair demonstrated economy.
+The Commodore 64 demonstrated accessible creativity.
 
 MSX demonstrated the power of an open platform.
 
-The Commodore 64 demonstrated accessible creativity.
+Sinclair demonstrated economy.
 
 MS-DOS demonstrated respect for files.
+
+Xerox PARC demonstrated that an idea can outlive the company that
+failed to sell it.
 
 The Macintosh demonstrated consistency.
 
 The Amiga demonstrated that sophistication need not become complexity.
 
 UNIX demonstrated the enduring strength of small, composable tools.
+
+WordStar demonstrated that muscle memory outlasts fashion.
+
+Turbo Pascal demonstrated that speed itself can teach.
+
+Palm demonstrated the discipline of a smaller, honest problem.
+
+E Ink demonstrated that a screen could finally learn to behave like
+paper.
 
 PaperOS is indebted to all of them.
 

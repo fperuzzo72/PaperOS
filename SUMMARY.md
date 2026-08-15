@@ -23,11 +23,14 @@ Part III — Learning from Computing History
 - MSX — A Standard Without a Flag
 - Sinclair — The Discipline of Less
 - MS-DOS — Respect for Files
+- Xerox PARC — The Future, Shipped by Someone Else
 - Macintosh — Consistency as a Promise
 - Amiga — Sophistication Without Complexity
 - UNIX — Small Tools, Long Memory
 - WordStar — The Muscle Memory That Would Not Die
 - Turbo Pascal — Speed as an Invitation
+- Palm and Newton — Solving a Smaller Problem on Purpose
+- E Ink — A Screen Willing to Stop Being a Screen
 
 Part IV — Architecture
 - System Architecture
