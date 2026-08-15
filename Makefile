@@ -1,2 +1,2 @@
 all:
-	@echo 'Pandoc build (coming soon)'
+	./scripts/build.sh

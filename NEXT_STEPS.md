@@ -8,19 +8,20 @@ Immediate priorities
    - Open Formats ✓
    - Hardware Independence ✓
 
-2. Complete the historical chapters (Part III):
+2. Complete the historical chapters (Part III): all originally planned
+   sub-chapters are done.
    - MSX ✓
    - Sinclair ✓
    - Commodore 64 ✓
-   - MS-DOS
-   - Macintosh
-   - Amiga
-   - UNIX
-   - WordStar
-   - Turbo Pascal
-   - Amstrad (not originally planned — suggested addition; the Sinclair
-     chapter references the 1986 acquisition and flags Amstrad as
-     deserving its own chapter)
+   - MS-DOS ✓
+   - Macintosh ✓
+   - Amiga ✓
+   - UNIX ✓
+   - WordStar ✓
+   - Turbo Pascal ✓
+   - Amstrad (not originally planned — suggested addition, still open;
+     the Sinclair chapter references the 1986 acquisition and flags
+     Amstrad as deserving its own chapter)
 
    Chapter numbering: Part II and Part III chapters are currently
    unnumbered in the source files (only Chapters 1-7 carry numbers,

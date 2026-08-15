@@ -1523,3 +1523,325 @@ machine can be stripped down to almost nothing and still open a door
 that stays open for an entire generation. PaperOS inherits that
 discipline directly: economy is not what is left over after the real
 design work is done. It is design work.
+
+
+---
+
+MS-DOS — Respect for Files
+
+MS-DOS did not begin as a triumph of design. It began as a purchase.
+In 1980, a programmer named Tim Paterson, working largely alone at a
+small company called Seattle Computer Products, wrote an operating
+system he called QDOS — the Quick and Dirty Operating System, a name
+that was more honest than modest. Microsoft licensed it, then bought
+it outright in 1981 for a few tens of thousands of dollars, renamed it
+MS-DOS, and licensed it to IBM for the new IBM PC. Almost nothing
+about that origin suggested it would end up running on tens of
+millions of machines for the next fifteen years.
+
+What made MS-DOS matter was never its technical elegance. It was
+IBM’s decision to publish the PC’s architecture openly enough that
+other manufacturers could build legally compatible machines around it.
+Compaq reverse-engineered the PC’s BIOS in 1982 without infringing
+IBM’s copyright, and an entire industry of “IBM compatible” computers
+followed. A program written for MS-DOS on one manufacturer’s machine
+ran on every other manufacturer’s machine, and MS-DOS itself, riding
+underneath all of it, became something closer to a public utility than
+a product any single company controlled.
+
+------------------------------------------------------------------------
+
+The chapter’s title points to something more specific than market
+history, though. When DOS 2.0 arrived in 1983, it introduced
+hierarchical directories, and the vocabulary that came with them was
+refreshingly literal. COPY copied a file. DEL deleted one. DIR listed
+what was actually sitting on the disk. TYPE printed a file’s contents
+exactly as they existed, nothing hidden and nothing added. There was
+no metaphor standing between a person and their data — no desktop
+pretending a file was a piece of paper, no icon disguising where
+anything actually lived. A file was a name, an extension, and a
+location, and it stayed exactly where it was put until someone moved
+it.
+
+That plainness produced something valuable that later, friendlier
+interfaces would spend the next forty years slowly giving back: an
+accurate mental model. A DOS user who had never heard the word
+“filesystem” nonetheless understood, correctly, where their work
+actually lived. PaperOS’s own insistence that the filesystem is not an
+implementation detail, argued in the Ownership chapter, is not a new
+idea. MS-DOS demonstrated it, unglamorously, decades earlier.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+Honesty about where a file lives is not a missing feature waiting to
+be designed away. It is the foundation everything else gets to stand
+on. MS-DOS never dressed up the filesystem as anything other than what
+it was, and an entire generation of users trusted it more for that
+plainness, not less.
+
+
+---
+
+Macintosh — Consistency as a Promise
+
+On January 24, 1984, Apple introduced a computer built almost entirely
+around an idea it did not invent: that people should point at what
+they mean instead of typing a command to describe it. The graphical
+interface had already been demonstrated years earlier at Xerox PARC,
+on machines called the Alto and the Star, seen by a young Steve Jobs
+on a visit in 1979 that would reroute the rest of his career. The
+Macintosh’s real contribution was not the invention of the desktop
+metaphor. It was the discipline of making that metaphor behave the
+same way everywhere, on every application, without exception.
+
+That discipline had a name and, eventually, a document: Apple required
+third-party software to follow a shared set of human interface
+conventions, so that the File menu was always the File menu, Quit
+always sat in the same place, and a keyboard shortcut learned in one
+program worked identically in the next. Copy, cut and paste, bound to
+the same three keys beside the space bar, became so consistent across
+the platform that the pattern outlived the Macintosh itself — the same
+three shortcuts, translated onto Ctrl instead of Command, are still
+what a person’s fingers reach for today on a completely different
+operating system, decades later.
+
+------------------------------------------------------------------------
+
+Consistency of this kind is easy to underrate, because it produces no
+single dramatic feature. It produces something quieter and more
+durable: a person who learns one Macintosh application already half
+knows the next one, and half knows the one after that. Chapter 6
+already described how shortcuts become a shared, collective memory.
+The Macintosh is where a large share of that shared memory was first
+standardized, deliberately, as a design requirement rather than an
+accident of habit.
+
+The Macintosh also carried the graphical interface out of the
+laboratory and into ordinary desks, paired soon after with the
+LaserWriter printer and page-layout software that together gave rise
+to desktop publishing — the first time an individual, working alone,
+could design and print something that looked like it came from a
+professional print shop. The point was never the mouse, and never the
+icons. It was that an entire category of skilled, specialized work
+became reachable by people who had never been trained for it.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+A good idea borrowed honestly and applied consistently can matter more
+than a good idea invented from scratch. The Macintosh did not create
+the graphical interface. It made a promise that the interface would
+behave the same way everywhere, and then it kept that promise long
+enough for millions of people to build fluency they never had to
+relearn.
+
+
+---
+
+Amiga — Sophistication Without Complexity
+
+In July 1985, Commodore released a computer that most of the industry
+would not catch up to for the better part of a decade. The Amiga ran a
+preemptive multitasking operating system at a time when both MS-DOS
+and the Macintosh’s System Software could reliably do only one thing
+at a time. It rendered thousands of on-screen colors and played four
+channels of digitized sound through a set of custom chips — Agnus,
+Denise and Paula — built specifically to take that work off the main
+processor’s hands, years before dedicated graphics hardware became an
+industry expectation rather than a novelty.
+
+None of that sophistication came at the cost of approachability. A
+teenager could still boot an Amiga into Workbench, its graphical
+desktop, and start using it within minutes, even while several
+programs ran genuinely at once underneath. The machine’s technical
+depth showed up when someone went looking for it — in video
+production, where the Amiga and NewTek’s Video Toaster became the
+backbone of an entire wave of public-access and syndicated television,
+doing broadcast-quality effects work for a fraction of the cost of the
+specialized hardware it replaced — and stayed out of the way
+otherwise.
+
+------------------------------------------------------------------------
+
+The Amiga’s downfall had little to do with its engineering. Commodore
+fragmented its own lineup across too many overlapping models,
+under-marketed a machine that was, by most technical measures, years
+ahead of its closest competitors, and filed for bankruptcy in 1994. A
+devoted community kept the platform alive in spirit long after the
+company that built it disappeared, which is its own kind of lesson: an
+idea can survive the business that failed to protect it, provided the
+idea was good enough to be worth remembering.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+Depth and simplicity are not opposites, and a system does not have to
+choose between them. The Amiga proved that real sophistication can
+hide quietly underneath an interface an ordinary person can pick up in
+minutes — right up until the moment sophistication is exactly what the
+work requires.
+
+
+---
+
+UNIX — Small Tools, Long Memory
+
+UNIX began, in 1969, as a reaction against something more ambitious
+than itself. Bell Labs researchers Ken Thompson and Dennis Ritchie had
+been working on Multics, a hugely complex operating system project
+that grew too large to finish on schedule. Thompson, working largely
+on his own time on a spare minicomputer, built something deliberately
+smaller — and its name, a pun on Multics, made the contrast explicit
+from the start. Where Multics tried to do everything, UNIX tried to do
+very little, and to do that little cleanly enough that other, more
+complicated things could be built on top of it later.
+
+The decision that mattered most came a few years afterward, when
+Ritchie and Thompson rewrote UNIX in a new programming language, C,
+designed alongside it for exactly this purpose. Before that, an
+operating system was written in the specific assembly language of the
+one machine it ran on, tying its fate permanently to that hardware. A
+UNIX written in C could, in principle, run on any machine with a C
+compiler. That single decision is the direct ancestor of every
+argument this book has made about hardware independence — the first
+time an operating system’s identity was allowed to separate cleanly
+from the silicon underneath it.
+
+------------------------------------------------------------------------
+
+UNIX’s philosophy left as deep a mark as its portability. Programs
+were meant to do one thing and do it well, communicating with each
+other through pipes — a plain, universal interface that let a
+text-filtering tool, a sorting tool and a searching tool combine into
+something none of them could do alone. AT&T, restricted at the time
+from selling software as a commercial product, distributed UNIX’s
+complete source code to universities for a nominal fee, and Berkeley’s
+students and researchers spent the following years extending it into
+what became BSD. That decision, more accident of antitrust law than
+strategy, seeded an entire academic generation with direct access to
+an operating system’s inner workings, at a moment when most computing
+remained locked behind proprietary walls.
+
+Nearly everything this book calls compatibility — small tools
+cooperating through open files rather than through one enormous
+integrated application — restates an argument UNIX made first, and
+made permanent. Linux, BSD and modern macOS all still carry UNIX’s
+lineage today, sometimes literally, sometimes only in spirit.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+A tool that does one thing honestly, and hands its output to the next
+tool through a plain, shared interface, outlives almost anything built
+as a single, self-contained monument. UNIX has been rewritten, forked
+and renamed more times than almost any other idea in computing, and
+its core discipline has survived every single one of them.
+
+
+---
+
+WordStar — The Muscle Memory That Would Not Die
+
+In 1978, a small company called MicroPro International released a
+word processor for the CP/M operating system, written largely by a
+programmer named Rob Barnaby from a specification by Seymour
+Rubinstein. WordStar became the dominant word processor of the early
+personal computer era, running first on CP/M machines and then on the
+wave of MS-DOS computers that followed, before WordPerfect and,
+eventually, Microsoft Word took its place at the top of the market
+through the second half of the 1980s.
+
+What outlived WordStar’s market share was its keyboard. Long before
+the mouse reached ordinary desks, WordStar built an entire vocabulary
+of two-key commands — Ctrl+K for block operations, Ctrl+Q for quick
+movement, and a diamond-shaped cluster of keys around the letters E,
+S, D and X that moved the cursor up, left, right and down without ever
+leaving the home row. Millions of typists absorbed that pattern into
+their hands so thoroughly that it became something closer to a reflex
+than a memorized command set, and reflexes, once built, are notoriously
+reluctant to be replaced by something merely newer.
+
+------------------------------------------------------------------------
+
+The clearest evidence of that reluctance is not historical. It is
+current. The novelist George R.R. Martin still writes on WordStar 4.0,
+on a dedicated DOS machine kept deliberately offline, decades after
+the rest of the software world moved on. Asked why, his answer has
+nothing to do with nostalgia: the program does exactly what he needs
+it to do for writing a novel, and nothing else — no autocorrect
+quietly rewriting a word he chose on purpose, no formatting
+suggestions, no notifications, no internet connection to interrupt him
+even if he wanted one. It is, unintentionally, one of the more complete
+real-world demonstrations of calm computing this book could ask for,
+running on hardware built before the term existed.
+
+WordStar’s diamond of cursor keys did not vanish with the program
+either. Later tools, including several of Borland’s own products,
+deliberately supported the same key pattern out of respect for how
+many hands already knew it by heart, extending the same idea Chapter 4
+and Chapter 6 already made about collective muscle memory: once a
+shortcut is learned by enough people, replacing it is not an
+improvement. It is a cost, paid by everyone who already knew the old
+way.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+A tool that gets out of a writer’s way earns a loyalty that outlasts
+fashion, sometimes by forty years and counting. WordStar’s real legacy
+was never its market share. It was proving that once a person’s hands
+learn where the words live, they will defend that knowledge longer
+than any company defends its own product.
+
+
+---
+
+Turbo Pascal — Speed as an Invitation
+
+In November 1983, a Danish programmer named Anders Hejlsberg, working
+with Borland, released a Pascal compiler priced at $49.99, a fraction
+of what professional development tools cost at the time. The price
+alone would have made Turbo Pascal notable. What made it transformative
+was a technical decision hiding underneath that price: Turbo Pascal
+held its editor, compiler and linker together in memory at the same
+time, compiling a program in a fraction of a second where competing
+tools required multiple slow passes to and from a floppy disk.
+Programmers who had grown used to writing code, saving it, waiting,
+and only then finding out whether it worked, suddenly did not have to
+wait at all.
+
+That speed changed the psychological shape of learning to program. A
+slow compiler punishes experimentation, because every small guess
+costs real time to test. A fast one rewards it, because a wrong guess
+is corrected in the time it takes to notice the mistake. Turbo
+Pascal’s near-instant feedback loop turned programming into something
+closer to a conversation than a formal submission process, and an
+entire generation of self-taught programmers learned to code by simply
+trying things, watching what happened, and trying again seconds later.
+
+------------------------------------------------------------------------
+
+Turbo Pascal’s influence did not stop at its own compiler. Anders
+Hejlsberg went on to lead Delphi, Borland’s later visual development
+environment, and was eventually hired by Microsoft, where he led the
+design of C# and later TypeScript — languages that, decades apart,
+still carry some of the same instinct Turbo Pascal established first:
+that a development environment should feel immediate, and that waiting
+is a cost a good tool should refuse to impose without reason.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+An environment that responds quickly enough does not just save time.
+It changes what a person is willing to attempt, because a mistake that
+costs nothing to discover stops feeling like a risk. PaperOS inherits
+that lesson directly: waiting interrupts thought, as Chapter 4 already
+argued, and Turbo Pascal is proof that removing the wait can turn a
+whole generation of hesitant beginners into confident builders.

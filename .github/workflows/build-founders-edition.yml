@@ -1,0 +1,48 @@
+name: Build Founder's Edition
+
+# Regenerates FoundersEdition/FoundersEdition.md — the single-file
+# compiled manuscript — from the individual chapter files in
+# FoundersEdition/src/. This keeps the compiled file in the repo
+# always in sync, so it can be downloaded directly (e.g. for reading
+# on an e-ink device) without needing to run the build locally.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "FoundersEdition/src/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-founders-edition
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build compiled manuscript
+        run: ./scripts/build.sh
+
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet -- FoundersEdition/FoundersEdition.md; then
+            echo "No changes to FoundersEdition.md — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add FoundersEdition/FoundersEdition.md
+          git commit -m "chore: rebuild Founder's Edition from source chapters [skip ci]"
+          git push
