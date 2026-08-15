@@ -2396,6 +2396,195 @@ the work it was built for is done.
 
 ---
 
+The Community
+
+A philosophy can be written by one person. An operating system cannot,
+not for long, and not the way this book means the word. PaperOS began
+as one person’s engineering notes, but nothing in the architecture
+described in Part IV is meant to stay that way, and nothing about the
+philosophy in Parts I and II requires it to.
+
+The first real community this project depends on did not form around
+PaperOS at all. It formed around the XTEInk X4, the device chosen as
+the first implementation target — practically, as the Hardware
+Independence chapter already admitted, precisely because an active
+developer community already surrounded it. That community did not
+wait for a finished philosophy before starting to build. It is the
+reason there is anything to build against at all, and PaperOS owes it
+the same respect Part III’s history chapters extended to every
+platform that got there first: gratitude, not ownership.
+
+------------------------------------------------------------------------
+
+A second community, older and larger, runs through this entire book
+without ever being named directly until now: the people who still
+care about the platforms Part III spent so many pages on. The
+collectors who keep an Amiga running decades past its manufacturer’s
+disappearance. The programmers who still reach for WordStar’s diamond
+of keys out of loyalty rather than habit. The retrocomputing hobbyists
+who treat old hardware the way a conservator treats an old painting —
+carefully, and because the thing itself still has something to say.
+PaperOS’s compatibility layer exists partly for them, and partly
+because of them: without people willing to keep documenting how these
+old systems actually worked, several of Part III’s chapters could not
+have been written accurately at all.
+
+------------------------------------------------------------------------
+
+Growing a community around a project like this carries a specific
+risk the Calm Computing chapter already named: every contributor
+arrives with a genuinely useful feature in mind, and every genuinely
+useful feature carries a permanent cost. An open project that says yes to
+everything eventually stops being calm, no matter how good its
+founding document was. PaperOS’s answer is not to discourage
+contribution. It is to keep the architecture itself doing the
+discouraging — a HAL that only accepts one small vocabulary, an
+application model that cannot reach past the Document Model, a
+philosophy willing to say no to a feature request not because the
+feature is bad, but because the question was never “can this be
+added.” A contributor is free to build anything permitted by those
+boundaries. The boundaries are not up for a vote.
+
+------------------------------------------------------------------------
+
+This is also why documents, not code, are the deepest layer of
+community this project can offer. A plugin author does not need
+permission from the core team any more than an application needs to
+own the document it opens. Two contributors who have never spoken to
+each other can build tools that cooperate perfectly, the same way a
+decades-old DOS editor and a modern Markdown viewer already learned to
+take turns around the same file in the Compatibility Layer chapter.
+Community, in PaperOS, is not a mailing list or a governance chart
+before it is anything else. It is a shared respect for the same open
+files everyone else is already trusted to read.
+
+
+---
+
+Roadmap
+
+A separate document in this repository lists the actual version
+milestones — what ships in 0.1, what waits for 0.2, what only makes
+sense once 1.0 is reached. This chapter is not a repetition of that
+list. It is an explanation of why the list is ordered the way it is,
+because the order was never arbitrary, and it follows directly from
+everything argued so far.
+
+Version 0.1 contains almost nothing a user would call a feature: boot,
+HAL, a display driver, a keyboard driver, a file browser, a text
+renderer, a plain text editor, a Markdown viewer. Nothing about
+journals, tasks, plugins, or compatibility. That restraint is
+deliberate, not a matter of running out of time before a deadline. The
+System Architecture chapter already argued that every layer only makes
+sense once the layer beneath it is trustworthy, and 0.1 exists to make
+exactly that argument true in code before anything is built on top of
+it. A system that cannot yet reliably draw a letter on a screen has no
+business promising a calendar.
+
+------------------------------------------------------------------------
+
+Version 0.2 adds the first real work surfaces — journal, calendar,
+tasks, library, search — precisely because 0.1 already proved the
+foundation holds. These are the categories Chapter 5 already described
+as replacing icons on a home screen: not applications competing for
+attention, but the shapes a person’s actual work already takes. They
+arrive second, not first, because a document-first interface only
+means something once documents already have somewhere reliable to
+live.
+
+Compatibility waits until version 0.3, and that placement is worth
+defending on purpose, because it would be easy to assume old software
+should come early, as a headline feature to attract early attention.
+The Compatibility Layer chapter argued that legacy software has to run
+sealed off from the rest of the system, talking only to a Document
+Model stable enough to trust with someone else’s decades-old files. An
+0.1 or 0.2 Document Model is not that model yet. Compatibility is
+hospitality, and hospitality requires a house that is already
+standing.
+
+------------------------------------------------------------------------
+
+Plugins and scripting, in version 0.4, wait longer still, and for the
+same underlying reason argued throughout Part II: an interface people
+can trust has to stay predictable, and a plugin system opened too
+early invites exactly the kind of instability Longevity was written to
+rule out. Optional synchronization arrives in the same release,
+deliberately paired with it — both are capabilities layered on top of
+a system already proven solid enough to survive them, rather than
+scaffolding the system is built around.
+
+By version 1.0, the promise is not a longer feature list. It is stable
+APIs, a desktop backend, a Paper S3 backend, a full SDK and complete
+documentation — proof, in other words, that the Hardware Independence
+chapter’s claim was not just prose. A roadmap that ends in stability
+rather than in a bigger version number is the only kind of roadmap
+this book’s philosophy could have produced.
+
+
+---
+
+Why PaperOS Matters
+
+It would be easy to read everything before this chapter as an
+elaborate justification for a hobby: one person’s fondness for old
+computers, dressed up in enough philosophy to sound like it matters
+more than it does. That reading deserves a direct answer rather than a
+defensive one.
+
+PaperOS matters, first, because the cost this book spent its early
+chapters describing is real and still being paid. Attention genuinely
+is finite. Interruption genuinely does destroy work that cannot always
+be recovered — the paragraph, the proof, the design insight, gone
+before it could be written down. These are not rhetorical claims built
+to support a product. They are the actual, daily experience of
+writers, researchers, students and programmers who have never read a
+word of this manifesto and would recognize every sentence of Chapter 3
+regardless. A piece of software built specifically to stop making that
+cost worse is not a nostalgic indulgence. It is a direct response to a
+problem most of computing has stopped even trying to solve.
+
+------------------------------------------------------------------------
+
+It matters, second, because of who ends up carrying the cost when
+nobody builds it. Ownership is not an abstract value for the person
+whose decade of research sits inside a subscription that lapsed, or
+whose only copy of an unfinished manuscript lives in a format no
+current software can open. Open formats and hardware independence are
+not features for enthusiasts. They are the only real insurance most
+people will ever have against watching years of their own thinking
+become unreadable through no fault of their own. This book made that
+argument at length because it is one of the few arguments in computing
+that gets more urgent with time, not less.
+
+------------------------------------------------------------------------
+
+It matters, third, because of what Part III proved rather than argued:
+none of these ideas are new, and none of them are unproven. An Apple
+II that trusted its owner to learn. A Commodore 64 that trusted a
+household budget over an institution’s. A standard that trusted
+openness to travel further than any single company could carry it
+alone, even when it traveled to places history stopped bothering to
+record. A research lab that got the future right and still could not
+sell it. A keyboard shortcut that outlived four decades of fashion. A
+display that finally learned to sit still. Every one of these ideas
+already worked, somewhere, for someone, before this book existed to
+collect them. PaperOS’s only real claim is that they deserve to work
+together, once, inside a single coherent system, instead of scattered
+across forty years of machines that never got to meet each other.
+
+And it matters, finally, for the smallest and least defensible reason
+of all, the one every other reason in this chapter is really standing
+in for: some kinds of work still need a place to happen quietly, and
+fewer and fewer computers are willing to offer one. That is not a
+technical problem with a technical solution waiting to be discovered.
+It is a choice, available to anyone willing to make it, about what a
+computer is allowed to interrupt. PaperOS is one attempt to make that
+choice on purpose, in public, and to keep making it long after the
+excitement of making it once has worn off.
+
+
+---
+
 The Computer That Waits
 
 Somewhere, right now, a notebook is sitting closed on a desk. Nobody is

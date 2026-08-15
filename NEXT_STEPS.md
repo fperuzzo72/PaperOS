@@ -62,11 +62,9 @@ Immediate priorities
    - Glossary ✓
    - Epilogue ✓ ("The Computer That Waits")
 
-   Ordering note: with Part V not yet written, the Epilogue currently
-   sits right after Part IV, with Bibliography and Glossary as back
-   matter after it. Once Part V (The Community, Roadmap, Why PaperOS
-   Matters) exists, the Epilogue should move to after it, keeping
-   Bibliography/Glossary as the very last files.
+   Ordering: resolved. Part V now exists (see item 7), so the Epilogue
+   was moved to sit after it, with Bibliography and Glossary as the
+   final back matter, as originally planned.
 
 5. Manifesto: distilled ✓ — MANIFESTO.md rewritten as v2.0, drawing on
    the full book rather than standing alone. Intended as a first draft
@@ -91,9 +89,24 @@ Immediate priorities
      registers stay explicitly linked instead of silently drifting
      apart again.
 
-7. Not yet started:
-   - Part V (The Community, Roadmap, Why PaperOS Matters)
-   - General review pass across Parts I-IV plus the new Manifesto
-     (planned next, per the author).
+7. Complete Part V (The Future): done ✓
+   - The Community ✓ — the XTEInk X4 developer community and the
+     retrocomputing community from Part III, plus the tension between
+     welcoming contribution and keeping the architecture's boundaries
+     non-negotiable (ties to Calm Computing and the HAL/Document Model
+     split).
+   - Roadmap ✓ — explains the reasoning behind ROADMAP.md's existing
+     version sequence (why compatibility waits for 0.3, why plugins
+     wait for 0.4) rather than repeating the list. ROADMAP.md now
+     points back to this chapter.
+   - Why PaperOS Matters ✓ — the direct case against reading the whole
+     project as nostalgia, closing Part V before the Epilogue.
 
-8. Publish Founder's Edition v1.0
+   All five Parts, plus front and back matter, are now written.
+
+8. Not yet started:
+   - General review pass across the whole book plus the new Manifesto
+     (planned next, per the author).
+   - Chapter numbering pass (see item 2) is still open.
+
+9. Publish Founder's Edition v1.0

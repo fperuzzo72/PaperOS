@@ -40,10 +40,15 @@ Part IV — Architecture
 - Compatibility Layer
 - Applications
 
+Part V — The Future
+- The Community
+- Roadmap
+- Why PaperOS Matters
+
 - Epilogue — The Computer That Waits
 - Bibliography
 - Glossary
 
-Not yet written: Part V (The Community, Roadmap, Why PaperOS Matters).
-See NEXT_STEPS.md for the current editorial roadmap and open
-suggestions.
+All five parts, front matter and back matter are now written. See
+NEXT_STEPS.md for the current editorial roadmap — a general review
+pass across the whole book is next.
