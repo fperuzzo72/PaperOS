@@ -1,223 +1,101 @@
 Chapter 3 — Computers and the Attention Economy
 
-The personal computer was never intended to become a marketplace for
-attention.
+The personal computer was never meant to become a marketplace for
+attention. Its earliest purpose was almost embarrassingly direct: a
+machine for calculation, for writing, for programming, for design, for
+learning. A person approached it with an intention, the computer
+helped fulfill it, and when the task ended the machine simply waited
+for the next one, the way a good tool always has. That relationship
+has drifted a long way from where it started.
 
-Its earliest purpose was remarkably direct.
-
-It was a machine for calculation. For writing. For programming. For
-design. For learning.
-
-The user approached the computer with an intention.
-
-The computer helped fulfill it.
-
-When the task ended, the computer quietly waited for the next one.
-
-This relationship has gradually changed.
-
-------------------------------------------------------------------------
-
-Over the past decades, software has become increasingly successful at
-capturing attention.
-
-Many products measure success by engagement.
-
-Time spent.
-
-Clicks.
-
-Sessions.
-
-Daily activity.
-
-None of these metrics directly measure whether meaningful work has been
-accomplished.
-
-They merely measure interaction.
-
-Interaction is not the same as productivity.
-
-Nor is it the same as learning.
-
-Or reflection.
-
-Or understanding.
+Over the past few decades, software has gotten remarkably good at
+capturing attention, and a great deal of it now measures success in
+terms that have nothing to do with the work itself — time spent,
+clicks, sessions, daily activity. None of those numbers actually
+measure whether anything meaningful got done. They measure
+interaction, and interaction is not the same thing as productivity, or
+learning, or reflection, or understanding, no matter how closely a
+dashboard tries to conflate the two.
 
 ------------------------------------------------------------------------
 
-Attention is finite.
+Attention is finite, and every interruption spends some of it.
+Sometimes the cost is a few seconds. Sometimes it is the complete loss
+of something fragile — a paragraph abandoned halfway through, a
+mathematical proof whose thread of reasoning snaps before it resolves,
+a design insight forgotten before it could be written down. Modern
+computing chronically underestimates costs like these, mostly because
+they resist being counted. The absence of distraction never shows up
+in an analytics dashboard. It remains, quietly, one of the greatest
+gifts software could ever give someone.
 
-Every interruption carries a cost.
-
-Sometimes that cost is only a few seconds.
-
-Sometimes it is the complete loss of a fragile idea.
-
-A paragraph abandoned halfway through.
-
-A mathematical proof whose reasoning is interrupted.
-
-A design insight forgotten before it can be recorded.
-
-Modern computing often underestimates these invisible costs because they
-are difficult to quantify.
-
-The absence of distraction rarely appears in analytics dashboards.
-
-Yet it is one of the greatest gifts software can offer.
-
-------------------------------------------------------------------------
-
-The attention economy did not emerge because engineers wanted to build
-worse software.
-
-It emerged because incentives changed.
-
-Advertising rewards visibility.
-
-Subscriptions reward engagement.
-
-Recommendation systems reward continued interaction.
-
-These incentives are understandable.
-
-But they are not universal.
-
-There remains space for software built around a different objective.
-
-Software whose success is measured by completed work rather than
-continued activity.
-
-PaperOS belongs to that tradition.
+The attention economy did not appear because engineers set out to
+build worse software. It appeared because the incentives underneath
+the software changed. Advertising rewards visibility. Subscriptions
+reward engagement. Recommendation systems reward one more minute of
+interaction. None of that is hard to understand, and none of it is
+universal — there remains room for software built around a different
+objective entirely, one where success is measured by work completed
+rather than activity sustained. PaperOS belongs to that older, quieter
+tradition.
 
 ------------------------------------------------------------------------
 
-This distinction affects surprisingly small design decisions.
+The distinction shows up in decisions that can look small in
+isolation. Should an interface animate every transition. Should a
+document announce every time it finishes syncing. Should the system
+keep narrating its own background activity, just in case someone wants
+to know. Any one of those choices seems harmless enough on its own.
+Stacked together, they add up to a continuous conversation the machine
+is having with its user, whether the user asked for it or not. Paper
+rarely interrupts anyone. PaperOS holds itself to the same restraint —
+the system speaks only when it actually has something worth saying,
+and silence becomes as much a part of the interface as anything drawn
+on the screen.
 
-Should an application animate every transition?
-
-Should a document announce every synchronization?
-
-Should the interface constantly report background activity?
-
-Each feature may seem harmless in isolation.
-
-Together they create a continuous conversation between the machine and
-its user.
-
-Paper rarely interrupts.
-
-PaperOS should be equally restrained.
-
-The system speaks only when it has something meaningful to say.
-
-Silence becomes part of the interface.
-
-------------------------------------------------------------------------
-
-Focus is not created by removing features alone.
-
-It is created by reducing uncertainty.
-
-Predictable shortcuts.
-
-Consistent navigation.
-
-Visible context.
-
-Stable document locations.
-
-These characteristics reduce the amount of attention spent managing the
-tool itself.
-
-The result is not merely efficiency.
-
-It is cognitive freedom.
+Focus is not built by stripping out features alone. It is built by
+reducing uncertainty: shortcuts that behave the same way every time,
+navigation that never surprises, context that stays visible, documents
+that stay where they were left. Together, these things shrink the
+amount of attention a person has to spend simply managing the tool,
+and what is left over is not just efficiency. It is something closer
+to freedom.
 
 ------------------------------------------------------------------------
 
-PaperOS therefore makes an unusual promise.
+PaperOS makes an unusual promise because of all this: it will never
+compete with the work taking place inside it. The operating system is
+not the destination. The document is. The code is. The research is.
+The book is. The journal is. When someone remembers what they made
+instead of the software they used to make it, the system has done
+exactly what it was built to do.
 
-It will never compete with the work taking place inside it.
-
-The operating system is not the destination.
-
-The document is.
-
-The code is.
-
-The research is.
-
-The book is.
-
-The journal is.
-
-When users remember what they created instead of the software they used,
-the system has succeeded.
+Some will read this as minimalism. It is not, or at least not only
+that — minimalism is an aesthetic, and PaperOS is guided by something
+closer to purpose. A feature is welcome whenever it deepens thought,
+and complexity is perfectly acceptable when it quietly absorbs a
+larger complexity that would otherwise fall on the person doing the
+work. The question guiding every design discussion is never “can this
+be added.” It is “does this help someone think,” and that single
+sentence does more work than any feature list could.
 
 ------------------------------------------------------------------------
 
-Some may view this philosophy as minimalist.
+There is a quiet paradox sitting at the center of all of this: the
+more invisible an operating system becomes, the more successful it
+actually is. A writer should remember the manuscript, not the editor.
+A student should remember the lesson, not the device. A programmer
+should remember the software they built, not the operating system
+underneath it. Very few people, in the end, should remember PaperOS at
+all, and PaperOS embraces that paradox instead of fighting it. Its
+ambition was never to be unforgettable. It was only ever to be
+transparent.
 
-It is not.
-
-Minimalism is an aesthetic.
-
-PaperOS is guided by purpose.
-
-Features are welcome whenever they deepen thought.
-
-Complexity is acceptable whenever it removes greater complexity from the
-user’s work.
-
-The question is never “Can this be added?”
-
-The question is “Does this help someone think?”
-
-That single question should accompany every design discussion.
-
-------------------------------------------------------------------------
-
-There is a quiet paradox in computing.
-
-The more invisible the operating system becomes, the more successful it
-is.
-
-A writer should remember the manuscript.
-
-A student should remember the lesson.
-
-A programmer should remember the software.
-
-A researcher should remember the discovery.
-
-Very few people should remember the operating system.
-
-PaperOS embraces this paradox.
-
-Its ambition is not to become unforgettable.
-
-Its ambition is to become transparent.
-
-------------------------------------------------------------------------
-
-This is not a rejection of modern computing.
-
-It is a reminder that computers can pursue more than one definition of
-success.
-
-Some systems optimize for entertainment.
-
-Others for collaboration.
-
-Others for creativity.
-
-PaperOS optimizes for thoughtful work.
-
-There is room in computing for all of these approaches.
-
-But thoughtful work deserves an environment intentionally designed for
-it.
-
-That is the environment PaperOS seeks to build.
+None of this is a rejection of modern computing, and it should not be
+read that way. It is simply a reminder that computers can chase more
+than one definition of success. Some systems optimize for
+entertainment, others for collaboration, others for pure creativity,
+and there is room in computing for all of them. Thoughtful work — the
+slow, quiet, uninterrupted kind — deserves an environment built
+specifically for it. That is the only environment PaperOS is trying to
+build.
