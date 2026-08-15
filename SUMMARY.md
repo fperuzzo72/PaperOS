@@ -23,6 +23,7 @@ Part III — Learning from Computing History
 - MSX — A Standard Without a Flag
 - Sinclair — The Discipline of Less
 - Amstrad — Computers by the Bundle
+- Acorn and Raspberry Pi — The Long Way Back to the Classroom
 - MS-DOS — Respect for Files
 - Xerox PARC — The Future, Shipped by Someone Else
 - Macintosh — Consistency as a Promise

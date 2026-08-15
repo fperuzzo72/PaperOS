@@ -62,7 +62,9 @@ because each solved at least one problem with unusual elegance. The
 Apple II demonstrated curiosity. The Commodore 64 demonstrated
 accessible creativity. MSX demonstrated the power of an open platform.
 Sinclair demonstrated economy. Amstrad demonstrated the reach of a
-complete, affordable bundle. MS-DOS demonstrated respect for files.
+complete, affordable bundle. Acorn and Raspberry Pi demonstrated that
+a foundation can carry a purpose nobody at the start planned for.
+MS-DOS demonstrated respect for files.
 Xerox PARC demonstrated that an idea can outlive the company that
 failed to sell it. The Macintosh demonstrated consistency. The Amiga
 demonstrated that sophistication need not become complexity. UNIX

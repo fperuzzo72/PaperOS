@@ -20,16 +20,22 @@ Immediate priorities
    - WordStar ✓
    - Turbo Pascal ✓
    - Amstrad ✓ — placed right after Sinclair, continuing the 1986
-     acquisition story directly. Also corrects a common misconception:
-     Amstrad has no relationship to ARM. ARM traces to Acorn Computers
-     (BBC Micro, the UK schools' Computer Literacy Project machine), a
-     rival Amstrad was busy beating in the retail market at the same
-     time. The chapter follows that thread forward to the Raspberry Pi
-     (ARM, explicitly built in the BBC Micro's spirit) and sideways to
-     the ESP32 (Xtensa, not ARM — the chip inside the M5Stack Paper S3,
-     one of PaperOS's own named future targets), tying straight back
-     into the Hardware Independence chapter's point about the HAL not
-     caring which chip family it runs on.
+     acquisition story directly. Kept tight to Amstrad's own story
+     (CPC, PCW, the Sinclair acquisition); corrects the common
+     misconception that Amstrad relates to ARM, then hands that thread
+     off to the next chapter rather than digressing into it.
+   - Acorn and Raspberry Pi ✓ — its own chapter, not folded into
+     Amstrad's. Covers Acorn Computers and the BBC Micro (the UK
+     schools' Computer Literacy Project machine, and the actual origin
+     of ARM, spun off in 1990), then Eben Upton's full personal story:
+     BBC Micro as a kid, Cambridge computing admissions tutor
+     (2004-2007) watching applicants' programming skill decline,
+     prototyping 2006-2008, and the Raspberry Pi's 2012 launch — an
+     ARM machine, explicitly rebuilding the BBC Micro's frictionless
+     path into programming. Closes with the ESP32 (Xtensa, not ARM —
+     the chip inside the M5Stack Paper S3, one of PaperOS's own named
+     future targets), tying straight back into Hardware Independence's
+     point about the HAL not caring which chip family it runs on.
 
    Three further additions, suggested in the previous pass, are now
    written and placed for narrative impact rather than tacked onto the
@@ -47,9 +53,10 @@ Immediate priorities
      chapter that hands off straight into Part IV's Rendering and HAL.
 
    The Chapter 7 introduction's platform tag list and the Epilogue's
-   enumeration paragraph were both updated to include all thirteen
-   sub-chapters in final order (previously only referenced the
-   original ten).
+   enumeration paragraph are kept in sync with Part III's sub-chapter
+   count and order on every addition (currently fifteen, up from the
+   original ten) — update both whenever a chapter is added, moved, or
+   split.
 
    Chapter numbering: Part II-IV chapters are currently unnumbered in
    the source files (only Chapters 1-7 carry numbers, a holdover from

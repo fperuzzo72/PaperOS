@@ -1116,7 +1116,9 @@ because each solved at least one problem with unusual elegance. The
 Apple II demonstrated curiosity. The Commodore 64 demonstrated
 accessible creativity. MSX demonstrated the power of an open platform.
 Sinclair demonstrated economy. Amstrad demonstrated the reach of a
-complete, affordable bundle. MS-DOS demonstrated respect for files.
+complete, affordable bundle. Acorn and Raspberry Pi demonstrated that
+a foundation can carry a purpose nobody at the start planned for.
+MS-DOS demonstrated respect for files.
 Xerox PARC demonstrated that an idea can outlive the company that
 failed to sell it. The Macintosh demonstrated consistency. The Amiga
 demonstrated that sophistication need not become complexity. UNIX
@@ -1433,31 +1435,82 @@ continuing to sell it, rather than trying to out-engineer it.
 
 There is a tempting but inaccurate story that connects Amstrad
 directly to ARM, the processor architecture that now runs inside the
-overwhelming majority of the world’s mobile phones. It is not true,
-and the real story is more interesting for being about a rival rather
-than a relative. ARM traces back to Acorn Computers, a different
-Cambridge-based company that spent the 1980s losing the retail battle
-Amstrad was busy winning. Acorn’s BBC Micro, built for the BBC’s
-Computer Literacy Project, became the machine an entire generation of
-British schoolchildren actually learned on — one and a half million
-units, overwhelmingly sold into classrooms rather than living rooms,
-at a moment when Amstrad’s cheaper, flashier machines were outselling
-Acorn everywhere else. In 1985, engineers Sophie Wilson and Steve
-Furber, working to give the aging BBC Micro more power, designed the
-Acorn RISC Machine — ARM — as a processor nobody outside Cambridge
-thought much about at the time. Acorn spun the design off as its own
-company in 1990. It now sits inside more devices than either Amstrad
-or Acorn ever sold as computers, combined.
+overwhelming majority of the world’s mobile phones. It is not true.
+ARM traces back to Acorn Computers, a different Cambridge-based
+company that spent the 1980s losing the retail battle Amstrad was busy
+winning — and quietly, unglamorously, laid the groundwork for
+something that would outlast both companies. That story, and where it
+eventually leads, is worth telling in full. It gets the next chapter
+to itself.
 
-That lineage runs in a direct, traceable line to a machine built
-explicitly in the BBC Micro’s own spirit. In 2012, engineer Eben
-Upton — who had owned a BBC Micro as a child and wanted a new
-generation to have the same experience he did — released the
-Raspberry Pi, a complete computer the size of a credit card, built
-around an ARM processor and priced to sit on a school desk rather than
-in a boardroom. Acorn’s education mission, abandoned as a business
-decades earlier, effectively returned to classrooms wearing new
-silicon.
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+Reach matters as much as engineering, and Amstrad’s whole career is
+proof of it. A complete, affordable bundle — one box, one price,
+nothing left for the customer to assemble — wins the living room in a
+way a technically superior but harder-to-buy machine rarely does.
+PaperOS takes that lesson at face value: a philosophy nobody can
+afford to try is a philosophy that only ever gets read, never used.
+
+
+---
+
+Acorn and Raspberry Pi — The Long Way Back to the Classroom
+
+The previous chapter left a thread deliberately loose: Amstrad won
+Britain’s living rooms in the 1980s, while a rival called Acorn
+Computers, busy losing that same fight, ended up shaping something
+larger instead. Acorn’s BBC Micro, built for the BBC’s Computer
+Literacy Project, sold one and a half million units, overwhelmingly
+into classrooms rather than homes, and became the machine an entire
+generation of British schoolchildren actually learned to program on.
+In 1985, Acorn engineers Sophie Wilson and Steve Furber designed a new
+processor to give that aging machine more power, called it the Acorn
+RISC Machine, and in 1990 spun the design off as its own company. ARM
+now sits inside the overwhelming majority of the world’s mobile
+phones. Acorn itself, the company that started it all, stopped making
+computers within the decade.
+
+------------------------------------------------------------------------
+
+That lineage runs in a straight, traceable line to a much later
+machine, and the person who built it has a personal story worth
+telling in full. Eben Upton owned a BBC Micro as a child, the same way
+an entire generation of his countrymen did. Years later, as Director
+of Studies responsible for computing admissions at a Cambridge college
+between 2004 and 2007, he watched the applicants in front of him
+change. Where earlier candidates arrived already deep into
+programming — the kind of casual, self-taught fluency the BBC Micro
+generation had picked up almost by accident — the students now in
+front of him increasingly knew basic web design and little else.
+
+Upton’s diagnosis was specific rather than nostalgic. The BBC Micro,
+like the Commodore 64 and the Sinclair Spectrum discussed earlier in
+this book, booted directly into a programming prompt. Turning the
+machine on was already, in a small way, an invitation to write
+something. The computers that replaced them booted into a desktop
+built for consuming software rather than writing it, and an entire
+frictionless on-ramp into programming quietly closed without anyone
+deciding to close it. It is close to the exact diagnosis this book
+already made about the Apple II, restated as an observed decline
+rather than a historical claim: a computer should encourage
+understanding, not merely consumption, and when it stops doing that,
+something measurable is lost within a single generation.
+
+Upton spent 2006 to 2008 prototyping a fix at the Cambridge Computer
+Laboratory: a complete computer, stripped down to almost nothing
+extra, cheap enough that a school or a parent would never hesitate to
+hand it to a child. The Raspberry Pi launched in February 2012 at
+twenty-five and thirty-five dollars, sold out its first batch within
+hours, and had passed six million units within three years — built, at
+its core, around an ARM processor. Acorn’s education mission,
+abandoned as a business decades earlier, had found its way back into a
+classroom after all, carried there by someone who had once been a
+child in one of Acorn’s original classrooms himself.
+
+------------------------------------------------------------------------
 
 The other lineage running through today’s small computers took a
 different path entirely, and it happens to be the one closer to home
@@ -1470,21 +1523,20 @@ hardware and trace their design back to two completely unrelated
 families, neither one owing the other anything. This is, in miniature,
 exactly why the Hardware Independence chapter insisted the HAL should
 never be allowed to care which family a given chip belongs to.
-Architectures multiply. The interface above them does not have to.
+Architectures multiply, for reasons that have nothing to do with each
+other. The interface sitting above them does not have to.
 
 ------------------------------------------------------------------------
 
 Lesson for PaperOS
 
-Two answers came out of the same country, in the same decade, to the
-same underlying question, and neither was wrong. Amstrad proved that a
-complete, affordable bundle wins the living room. Acorn proved that a
-machine built for a classroom, funded by a broadcaster, can quietly
-seed the architecture the rest of the world ends up standing on
-decades later. PaperOS needs a version of both instincts: cheap enough
-to reach a bedroom desk, and serious enough about its own foundations
-to still matter after everyone has forgotten which device it first
-shipped on.
+A machine built to answer one teacher’s very specific worry about one
+generation of Cambridge applicants ended up inside thousands of e-ink
+devices, satellite modems and pocket computers it was never designed
+for, because the architecture underneath it was honest enough to be
+reused. PaperOS is built on the same bet: that a foundation taken
+seriously enough will end up carrying weight nobody involved at the
+start ever specifically planned for.
 
 
 ---
@@ -2525,30 +2577,32 @@ further than any single company ever could, even when the country
 writing most of the history books declined to notice. A Sinclair
 machine stripped down to almost nothing that still opened a door wide
 enough for an entire industry to walk through. A complete, affordable
-bundle that won a living room while a rival’s classroom machine
-quietly seeded the chip now running in almost everyone’s pocket. A
-filesystem that told the truth about where files lived. A research lab
-that invented the desktop before anyone knew to want one, and shipped
-almost none of it itself. A graphical interface that kept its promises
-consistently enough to become muscle memory. A machine ahead of its
-time that a company still managed to lose. An operating system
-rewritten in a portable language, given away to universities almost by
-accident, that outlived every business built on top of it. A word
-processor a novelist still trusts today, decades after everyone else
-moved on. A compiler fast enough to turn hesitation into curiosity. A
-handheld that succeeded by asking less of handwriting recognition, not
-more. A display technology patient enough to finally stop asking to be
-called a screen. Fourteen different answers to the same underlying
-question,
-arrived at independently, across different decades, by people who
-mostly never met each other. That much agreement, across that much
-time, is not a coincidence worth dismissing.
+bundle that won a living room, sold by a rival of the classroom
+machine that quietly seeded the chip now running in almost everyone’s
+pocket. A teacher’s very specific worry about one generation of
+university applicants, answered decades later by a credit-card-sized
+computer built on that same seed. A filesystem that told the truth
+about where files lived. A research lab that invented the desktop
+before anyone knew to want one, and shipped almost none of it itself.
+A graphical interface that kept its promises consistently enough to
+become muscle memory. A machine ahead of its time that a company still
+managed to lose. An operating system rewritten in a portable language,
+given away to universities almost by accident, that outlived every
+business built on top of it. A word processor a novelist still trusts
+today, decades after everyone else moved on. A compiler fast enough to
+turn hesitation into curiosity. A handheld that succeeded by asking
+less of handwriting recognition, not more. A display technology
+patient enough to finally stop asking to be called a screen. Fifteen
+different answers to the same underlying question, arrived at
+independently, across different decades, by people who mostly never
+met each other. That much agreement, across that much time, is not a
+coincidence worth dismissing.
 
 ------------------------------------------------------------------------
 
-PaperOS does not claim to be the fifteenth answer, better than the
-fourteen before it. It claims something smaller, and offers it
-honestly: an attempt to hold all fourteen lessons at once, inside one
+PaperOS does not claim to be the sixteenth answer, better than the
+fifteen before it. It claims something smaller, and offers it
+honestly: an attempt to hold all fifteen lessons at once, inside one
 coherent piece of software, without losing any of them to the next
 redesign.
 
