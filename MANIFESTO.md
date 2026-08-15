@@ -1,270 +1,220 @@
-PaperOS Manifesto Version 1.0 (Founding Manifesto)
+PaperOS Manifesto — Version 2.0
+Distilled from the Founder’s Edition
 
 “PaperOS is not designed to help you use a computer. It is designed to
 help you think.”
 
 PREFACE
 
-Paper is one of humanity’s greatest technologies.
+Paper is one of humanity’s greatest technologies. For thousands of
+years it has carried ideas across generations, preserving science,
+literature, mathematics, philosophy, engineering and history, quietly
+accompanying students, researchers, writers, artists and engineers.
+Paper never competes for attention. It waits, it remembers, and it
+belongs entirely to whoever writes upon it.
 
-For thousands of years it has carried ideas across generations. It has
-preserved science, literature, mathematics, philosophy, engineering and
-history. Quietly, it has accompanied students, researchers, writers,
-artists and engineers.
-
-Paper never competes for attention.
-
-It waits.
-
-It remembers.
-
-It belongs to whoever writes upon it.
-
-Modern computers have inherited extraordinary computational power, yet
-many have lost the qualities that made paper such an effective companion
-to human thought. Notifications interrupt. Applications compete for
-attention. Interfaces demand constant interaction. Information has
-become abundant while concentration has become scarce.
-
-PaperOS was born from a simple question:
-
-What if computers had evolved from notebooks instead of televisions?
-
-This project is an attempt to answer that question.
+Modern computers inherited extraordinary computational power, but many
+lost the qualities that made paper such an effective companion to
+human thought. Notifications interrupt. Applications compete for
+attention. Information has become abundant while concentration has
+become scarce. PaperOS was born from a simple question: what if
+computers had evolved from notebooks instead of televisions? This
+manifesto, and the longer book it is drawn from, is an attempt to
+answer that question honestly.
 
 WHY PAPEROS EXISTS
 
 PaperOS exists to create a calm computing environment dedicated to
-thinking.
+thinking. It is not built for entertainment, and it is not built to
+maximize engagement or keep anyone online. It exists for reading,
+writing, studying, programming, research, planning, reflection and
+knowledge, and every design decision should strengthen one of those
+activities. Everything else is secondary.
 
-It is not built for entertainment. It is not built to maximize
-engagement. It is not built to keep users online.
-
-It exists for reading. Writing. Studying. Programming. Research.
-Planning. Reflection. Knowledge.
-
-Every design decision should strengthen these activities. Everything
-else is secondary.
+This is not an operating system built because existing ones are
+inadequate. Modern operating systems are extraordinary achievements,
+solving immense problems and connecting billions of people. PaperOS
+simply serves a smaller, more personal ambition: to become the quiet
+place where ideas begin, and to disappear once that work is underway.
 
 THE VIRTUES OF PAPER
 
 Paper has survived for centuries because it possesses qualities worth
-preserving.
+preserving. It is quiet, portable, durable and understandable. It
+never interrupts, never demands attention, and patiently waits
+wherever it was left. A technology still useful after two thousand
+years is not old — it is timeless, and PaperOS does not attempt to
+imitate paper so much as learn from it, carrying its proven principles
+forward rather than trying to recreate the past.
 
-It is quiet. It is portable. It is durable. It is understandable. It
-never interrupts. It never demands attention. It patiently waits where
-it was left.
-
-PaperOS does not seek to replace paper.
-
-It seeks to preserve these virtues whenever digital technology offers
-genuine advantages.
-
-When paper is enough, use paper.
-
-When digital tools become necessary, PaperOS should feel like the
-natural continuation of the notebook.
+PaperOS does not seek to replace paper. It seeks to preserve paper’s
+virtues whenever digital technology offers a genuine advantage — and
+to defer to paper honestly whenever it does not.
 
 CALM COMPUTING
 
 Technology should amplify thought rather than compete with it.
+Silence, focus and predictability are not missing features; they are
+the product. The computer should disappear while meaningful work is
+taking place, so that a person thinks about their ideas and never
+about the interface holding them.
 
-Silence is a feature.
+Calm computing is not slow computing. It does not reject powerful
+hardware, and it does not ask anyone to work less efficiently. It asks
+only that technology remain available without constantly demanding to
+be noticed. Some of that calm is inherited directly from paper and
+cannot be recreated on a keyboard — the way cursive handwriting
+engages the mind is not something typing reproduces. But some of it
+survives in translation: a shared, collective muscle memory built
+around QWERTY and a handful of universal shortcuts — Ctrl+C, Ctrl+V,
+Ctrl+S — lets a person’s hands act without asking their mind to stop
+and think about the tool itself, the same way an experienced writer’s
+hand no longer thinks about the pen. Staying inside that keyboard-driven
+mode of composing, rather than constantly switching into a
+mouse-driven mode of pointing, is itself a form of calm — not because
+pointing devices are forbidden, but because every unnecessary switch
+between modes is a seam where a thought can slip through.
 
-Focus is a feature.
+DOCUMENTS BEFORE APPLICATIONS
 
-Predictability is a feature.
+A page of paper was never opened by anything. It was written on, and
+it remained exactly what it was — the page has no application, and it
+never had to. PaperOS therefore organizes itself around documents
+rather than applications. Documents represent knowledge. Applications
+are simply tools, useful for as long as they serve the document in
+front of them and disposable the moment something better comes along.
 
-The computer should disappear while meaningful work is taking place.
+No document should become inaccessible because the software that
+created it disappeared. A home screen, under this principle, is not a
+shelf of icons — it is closer to a desk, showing the work already in
+progress rather than a choice still waiting to be made. Software,
+where it needs to be found at all, is organized around what a person
+wants to do — read, write, draw, explore retrocomputing history — not
+around whichever brand happens to make the tool.
 
-The user should think about ideas, never about the interface.
+OWNERSHIP
 
-DOCUMENTS ARE PERMANENT
+Knowledge belongs to its author. PaperOS therefore prefers open,
+documented and human-readable formats — Markdown, plain text, CSV,
+TOML, INI, EPUB, PDF — and treats the filesystem itself as part of the
+experience rather than an implementation detail hidden behind an
+application. Synchronization is always optional, and export should
+rarely be necessary, because ordinary files are already the native
+format.
 
-Applications come and go.
-
-Documents remain.
-
-PaperOS therefore organizes itself around documents rather than
-applications.
-
-Documents represent knowledge.
-
-Applications are simply tools.
-
-No document should become inaccessible because the software that created
-it disappeared.
-
-THE USER OWNS THE DATA
-
-Knowledge belongs to its author.
-
-PaperOS therefore prefers open, documented and human-readable formats.
-
-Markdown. Plain text. CSV. TOML. INI. EPUB. PDF.
-
-The filesystem is not an implementation detail.
-
-It is part of the user experience.
-
-Synchronization should always be optional.
-
-Export should rarely be necessary because ordinary files are already the
-native format.
+Ownership does not stop at the file format. PaperOS carries no
+advertising, no surveillance and no mandatory online service of any
+kind. A system that profits from watching its owner cannot also be
+built to protect that owner’s concentration, and PaperOS chooses
+concentration. The computer belongs to its user, always, measured the
+same simple way paper has always measured it: by whether someone can
+close the notebook, walk away, and find everything exactly as it was
+left.
 
 KEYBOARD FIRST
 
-The keyboard remains humanity’s most efficient tool for transforming
-thought into language.
+The keyboard remains humanity’s most efficient instrument for
+transforming thought into language, and every essential feature of
+PaperOS must remain reachable from it. Touch, stylus and pointing
+devices are welcome as complements — reading benefits from a page
+turned by hand, and sketching belongs naturally to a pen — but the
+principle is “keyboard always available,” not “keyboard only.”
 
-Every essential feature of PaperOS must be accessible from the keyboard.
-
-Touch, stylus and pointing devices may complement the experience, but
-never define it.
-
-If a feature cannot reasonably be used from the keyboard, its design
-should be reconsidered.
+Shortcuts learned once should keep working decades later. QWERTY, and
+the handful of key combinations built on top of it, form one of
+computing’s few genuinely collective memories, shared by people who
+have never met and never will. Replacing that memory is not an
+improvement. It is a cost paid by everyone who already trusted the old
+way.
 
 CONTEXT MUST NEVER DISAPPEAR
 
-Attention is a limited resource.
-
-Confusion wastes it.
-
-The user should always know:
-
-Where they are. What document is open. Which mode is active. What action
-will happen next.
-
-Orientation is not decoration.
-
-It is usability.
+Attention is a limited resource, and confusion wastes it. A person
+should always be able to answer, without effort: where they are, what
+document is open, which mode is active, and what will happen next.
+Orientation is not decoration. It is usability, and it is one of the
+quieter debts every interface owes the person using it.
 
 SIMPLICITY IS AN ETHICAL CHOICE
 
-Every additional feature carries a permanent cost.
-
-Complexity increases maintenance, documentation, testing and cognitive
-load.
-
-PaperOS values restraint.
-
-Every pixel should communicate information.
-
-Every command should have purpose.
-
-Every feature must justify its existence.
+Every additional feature carries a permanent cost in maintenance,
+documentation, testing and cognitive load. PaperOS values restraint:
+every pixel should communicate something, every command should have a
+purpose, and every feature must justify the burden it places on the
+person who now has to understand it, whether they wanted to or not.
 
 LEARNING FROM HISTORY
 
-Innovation does not require forgetting.
-
-PaperOS studies the history of computing with respect.
-
-Classic systems, text editors and programming environments solved
-difficult problems with remarkable elegance.
-
-Retrocomputing is not nostalgia.
-
-It is the preservation of knowledge.
+Innovation does not require forgetting. Classic systems, text editors
+and programming environments solved difficult problems with
+remarkable elegance, often because severe hardware limitations forced
+a clarity later generations, with room to spare, rarely bothered to
+find again. Retrocomputing, studied this way, is not nostalgia. It is
+the preservation of knowledge, and the tradition this book draws its
+Part III from at length.
 
 COMPATIBILITY PRESERVES KNOWLEDGE
 
 Historic software remains part of our collective technical heritage.
-
-Whenever practical, PaperOS will integrate compatibility environments
-capable of executing classic software.
-
-Legacy applications should work naturally with modern documents.
-
-The past and the present should collaborate rather than compete.
+Wherever practical, PaperOS integrates a compatibility layer capable
+of running classic software, sealed off from the rest of the system so
+that old and new can meet safely around the one thing every era of
+computing has always agreed on: a document. The past and the present
+should collaborate rather than compete.
 
 HARDWARE INDEPENDENCE
 
-PaperOS belongs to no specific device.
-
-Its identity is philosophical rather than technological.
-
-Electronic paper displays currently express that philosophy
-exceptionally well, but they are not its definition.
-
-The first implementation target is the XTEInk X4 because of its active
-developer community.
-
-Future implementations may include the M5Stack Paper S3, desktop
-operating systems and text terminals.
-
-Portability is a design principle, not a future goal.
+PaperOS belongs to no specific device. Its identity is philosophical
+rather than technological. Electronic paper expresses that philosophy
+exceptionally well today, but it is not the definition of it. The
+first implementation targets the XTEInk X4, chosen for practical
+reasons — an active developer community, not ideology. Future
+implementations may include the M5Stack Paper S3, desktop operating
+systems and text terminals. Portability is a design principle, not a
+future goal, enforced architecturally through a hardware abstraction
+layer that nothing else in the system is permitted to see past.
 
 LONGEVITY
 
-PaperOS should age gracefully.
-
-Documents should remain readable.
-
-Interfaces should remain familiar.
-
-Keyboard shortcuts should remain stable.
-
-Longevity is a design requirement.
+PaperOS should age gracefully. Documents should remain readable,
+interfaces should remain familiar, and keyboard shortcuts should
+remain stable for decades. Longevity is a design requirement, not an
+aspiration — the same non-negotiable standard a load-bearing wall is
+held to, because every other promise in this manifesto depends on it
+being kept.
 
 FREEDOM
 
-PaperOS respects its users.
-
-No advertising.
-
-No surveillance.
-
-No mandatory online services.
-
-The computer belongs to its user.
-
-Always.
+PaperOS respects its users. No advertising. No surveillance. No
+mandatory online services. The computer belongs to its user, always.
 
 ENGINEERING PHILOSOPHY
 
-Architecture must reflect philosophy.
-
-Applications should never depend directly on hardware.
-
-Rendering should be separated from interface logic.
-
-Platform-specific code should remain isolated.
-
-Hardware should be replaceable without rewriting the system.
+Architecture must reflect philosophy. Applications never depend
+directly on hardware. Rendering stays separated from interface logic,
+so that a change in display technology never requires rewriting how
+software behaves. Platform-specific code stays isolated in its own
+replaceable layer. None of this is exotic engineering — it is one of
+the oldest, most proven ideas software has. What makes it PaperOS’s is
+treating the discipline as non-negotiable rather than convenient.
 
 THE FIRST STEP
 
-The first implementation targets the XTEInk X4.
-
-This choice is practical, not ideological.
-
-The architecture will be designed from the first commit to support
-additional platforms through clean abstraction layers.
-
-An implementation is temporary.
-
-The philosophy is permanent.
+The first implementation targets the XTEInk X4. This choice is
+practical, not ideological, and the architecture is designed from the
+first commit to support additional platforms through clean
+abstraction layers. An implementation is temporary. The philosophy is
+permanent.
 
 AN INVITATION
 
-PaperOS is an invitation to rethink personal computing.
-
-Not by rejecting progress.
-
-Not by romanticizing the past.
-
-But by recovering ideas that time has already proven valuable.
-
-If you believe computers should help people think instead of competing
-for their attention…
-
-If you believe documents should outlive applications…
-
-If you believe software should respect its users…
-
-Then you already understand PaperOS.
+PaperOS is an invitation to rethink personal computing — not by
+rejecting progress, and not by romanticizing the past, but by
+recovering ideas that time has already proven valuable. If you believe
+computers should help people think instead of competing for their
+attention, if you believe documents should outlive applications, and
+if you believe software should respect the people who use it, then you
+already understand PaperOS.
 
 Welcome.
 
@@ -272,18 +222,17 @@ FOUNDING PRINCIPLES
 
 PaperOS shall always strive to:
 
--   Preserve the virtues of paper.
--   Help people think.
--   Keep documents open.
--   Prefer simplicity over novelty.
--   Prefer permanence over trends.
--   Keep context visible.
--   Put the keyboard first.
--   Learn from computing history.
--   Respect the user’s ownership of data.
--   Remain independent from hardware.
+- Preserve the virtues of paper.
+- Help people think.
+- Keep documents before applications, and documents open.
+- Prefer simplicity over novelty.
+- Prefer permanence over trends.
+- Keep context visible.
+- Put the keyboard first, always available even when not required.
+- Learn from computing history.
+- Respect the user’s ownership of their data, always.
+- Remain independent from hardware.
 
-PaperOS does not seek to replace the computer.
-
-It seeks to recover the virtues of paper when paper alone is no longer
-enough.
+PaperOS does not seek to replace the computer. It seeks to recover the
+virtues of paper when paper alone is no longer enough — and to remain,
+in the end, the computer that waits.

@@ -1,3 +1,55 @@
+Preface
+
+Every generation reimagines the computer. Few stop to ask what should
+never have changed.
+
+This book is an attempt to ask that second question seriously, and to
+keep asking it long enough to get an honest answer.
+
+It did not begin as a book. It began as a much smaller document — a
+handful of engineering notes for an operating system meant to run on a
+small electronic paper display, written mostly to keep one project
+consistent with itself over time. The notes kept growing, and at some
+point it became clear that most of what mattered was not technical at
+all. Before any line of code could be written honestly, a harder
+question had to be settled first: what is a computer actually for.
+This book is the answer that grew out of trying to settle it.
+
+Nothing here is a rejection of modern computing, and nothing here asks
+anyone to give up hardware, software, or convenience they rely on.
+What it asks is smaller and, hopefully, more useful: that somewhere
+among today’s extraordinary computing achievements, room still exists
+for a different kind of relationship between a person and a machine —
+one closer to the relationship a person has always had with paper.
+Quiet. Patient. Entirely theirs.
+
+------------------------------------------------------------------------
+
+Part I lays out why that relationship matters, using the plainest
+possible starting point: a notebook, and the silence around it. Part
+II turns that argument into specific commitments — about ownership,
+formats, hardware and time — that a real piece of software would need
+to keep, not just claim. Part III steps sideways into computing
+history, not as nostalgia but as evidence, gathering lessons from
+machines and platforms that already solved, decades ago, some piece of
+the problem this book is trying to solve again. Part IV explains, at
+the level of architecture rather than code, how the philosophy is
+meant to become software without betraying itself along the way.
+
+None of these parts strictly require the others to be read first. A
+reader more interested in the history than the philosophy is welcome
+to start there. A reader who only wants the architecture can skip
+ahead to it directly. But the order they are presented in here is not
+arbitrary either: it is the order the questions actually had to be
+answered in, before any of this was buildable.
+
+PaperOS is not an attempt to return to the past.
+
+It is an attempt to carry its best ideas into the future.
+
+
+---
+
 Chapter 1 — The Notebook That Never Existed
 
 “PaperOS is not designed to help you use a computer.
@@ -1845,3 +1897,489 @@ costs nothing to discover stops feeling like a risk. PaperOS inherits
 that lesson directly: waiting interrupts thought, as Chapter 4 already
 argued, and Turbo Pascal is proof that removing the wait can turn a
 whole generation of hesitant beginners into confident builders.
+
+
+---
+
+System Architecture
+
+A philosophy earns the right to call itself an architecture only once
+it can survive contact with actual hardware, actual memory limits, and
+an actual screen that only wants to be touched a few times a second.
+This chapter is where that contact happens.
+
+PaperOS is built in layers, and the layers exist for exactly one
+reason: so that a change at the bottom never forces a rewrite at the
+top. At the very bottom sits the hardware abstraction layer, the only
+part of the system allowed to know anything about the specific chip,
+the specific display panel, the specific keyboard controller
+underneath it. Above that sits rendering, which knows how to put
+pixels and text on a screen but has no opinion about what that text
+means. Above rendering sits the document model, which understands
+documents — their structure, their formats, their location on disk —
+but has no idea what shape a screen is, or whether there is a screen
+at all. At the top sit applications, which understand a single
+activity — reading, writing, drawing — and reach everything else only
+through the layers beneath them, never around them.
+
+------------------------------------------------------------------------
+
+This shape is not a diagram drawn after the fact to explain decisions
+already made. It is close to the actual order the decisions had to be
+made in, because each layer only makes sense once the one below it is
+trustworthy. An application cannot commit to being calm if rendering
+might interrupt it with an unpredictable delay. Rendering cannot commit
+to being predictable if the hardware abstraction layer might leak some
+device-specific quirk through it. Every philosophical promise made
+earlier in this book — that the system will wait, that documents will
+outlive applications, that hardware can be swapped without rewriting
+everything above it — depends on a layer beneath it actually holding
+that line.
+
+The compatibility layer, discussed later in this part, sits slightly
+apart from this stack rather than inside it, deliberately. Old software
+was never written with any of these layers in mind, and pretending
+otherwise would corrupt the whole design. It is easier, and more
+honest, to let legacy systems run inside their own contained space,
+talking to the rest of PaperOS only through documents — the one
+interface every era of computing has always been willing to agree on.
+
+------------------------------------------------------------------------
+
+None of this is exotic engineering. Layered architecture is one of the
+oldest, most thoroughly proven ideas software has, and PaperOS makes no
+claim to have invented it. What it claims is something more specific:
+that here, the layering is not a convenience for engineers. It is the
+mechanism the entire philosophy runs on. Remove it, and every promise
+made in the earlier parts of this book becomes a hope instead of a
+guarantee.
+
+
+---
+
+HAL
+
+Somewhere beneath every screen PaperOS will ever draw on sits a
+boundary that is not allowed to move: the line between code that knows
+what hardware it is running on, and code that does not, and never gets
+to ask.
+
+That boundary is the hardware abstraction layer, and its entire job is
+narrower than its name suggests. It does not try to make every device
+the same. An electronic paper display and a desktop monitor behave
+nothing alike, and the HAL does not pretend otherwise. What it does
+instead is translate: whatever a display, a keyboard, a battery sensor
+or a storage chip actually does, in whatever specific and idiosyncratic
+way that particular piece of hardware does it, the HAL restates it in
+one small, stable vocabulary that the rest of the system is allowed to
+depend on completely. Draw this. Read this key. Report this battery
+level. Everything above the HAL speaks only that vocabulary, and never
+learns the dialect underneath it.
+
+------------------------------------------------------------------------
+
+This is where the argument made in the Hardware Independence chapter
+stops being a philosophical position and becomes an engineering
+discipline. It is easy to promise, in prose, that a system will not
+depend on any one device. It is a different thing entirely to
+structure the code so that the promise cannot quietly be broken by a
+developer in a hurry, reaching one layer too far down because it was
+faster than doing things properly. The HAL exists specifically to make
+that shortcut impossible, not merely discouraged. If a new panel, a
+new input method, or an entirely new class of device — a desktop, a
+terminal, hardware that does not exist yet — needs support, the work
+happens once, inside the HAL, and nothing above it has to be touched,
+let alone rewritten.
+
+------------------------------------------------------------------------
+
+The first implementation of this boundary targets the XTEInk X4, and
+everything the HAL exposes to the rest of the system is deliberately
+written as though a second, very different device were going to be
+plugged in tomorrow. That discipline is expensive in the short term. A
+team in a hurry could always ship something faster by letting the
+layers blur together, just this once. PaperOS treats that shortcut as
+a debt the project refuses to take on, because a HAL that gets
+compromised once tends to get compromised everywhere, quietly, until
+portability is a claim the documentation makes rather than a property
+the code actually has.
+
+A boundary that can be crossed under pressure is not a boundary. It is
+a suggestion, and this is the one place in the system PaperOS is not
+interested in being flexible about it.
+
+
+---
+
+Rendering
+
+A page of paper and a page on a screen share a word, and almost
+nothing else about how they come to exist. Ink sits still once it
+dries. Pixels have to be told, over and over, to keep being what they
+were a moment ago, and the way that telling happens is where an entire
+category of design mistakes usually enters a system uninvited. PaperOS
+keeps rendering in its own layer specifically so those mistakes have
+nowhere to hide.
+
+Rendering’s job is narrow on purpose: take a description of what
+should appear — this text, in this position, at this size — and put it
+on the screen. It has no opinion about what the text means, why it is
+being shown, or what happens when someone taps near it. That
+separation is what lets the same interface logic run, unmodified, on
+hardware that behaves completely differently underneath. An electronic
+paper display refreshes slowly, partially, and unevenly if pushed
+carelessly — a full-screen redraw can leave a visible ghost of whatever
+was there a moment before, which is why e-ink rendering has to think
+deliberately about which regions actually need to change and which can
+be left alone. A desktop monitor has none of these constraints and
+almost the opposite failure mode: it can redraw so fast that
+unnecessary motion becomes a distraction rather than a limitation.
+Interface logic sitting above the rendering layer never has to know
+which of these situations it is in. It describes intent. Rendering
+decides how that intent becomes light.
+
+------------------------------------------------------------------------
+
+This division also protects the calm computing argument made earlier
+in this book in a very literal way. An animation that exists only
+because a rendering engine makes animation easy is not a decision
+interface logic gets to make casually, because interface logic does
+not control motion directly — it can only ask, and rendering is
+designed to say no by default. Restraint here is not a matter of
+discipline enforced by a style guide. It is a property of the boundary
+itself: the layer that would need to cooperate with unnecessary
+movement simply is not asked to unless a real reason exists.
+
+------------------------------------------------------------------------
+
+Keeping rendering separate also means keeping it replaceable. A future
+backend for a different display technology, or for a completely
+different form factor, only has to reimplement this one layer
+faithfully. Everything built on top of it — every application, every
+document view, every piece of interface logic already written —
+continues working exactly as it did, because none of it was ever
+allowed to know how the pixels actually got there.
+
+
+---
+
+Documents
+
+Most software keeps two versions of a document at once without ever
+admitting it: the version sitting on disk, and the version living
+inside the application’s own memory, restructured into whatever
+internal format makes the program’s code easiest to write. The two are
+kept in sync, more or less, through periodic saves, and the gap between
+them is where a surprising share of lost work has always lived — the
+file that did not save before the crash, the edit that only existed in
+memory when the battery died.
+
+PaperOS’s document architecture tries to close that gap rather than
+manage it more carefully. Wherever practical, the format on disk and
+the format held in memory while editing are the same format, not two
+representations kept loosely aligned. A Markdown file being edited is
+still, structurally, a Markdown file while it sits in memory — not a
+proprietary editor-internal tree that gets serialized back into
+Markdown only at save time. There is no import step when a document is
+opened and no export step when it is saved, because nothing was ever
+converted into something else to begin with. The Open Formats chapter
+already argued that a document should never become a hostage to the
+application that happens to be holding it. This is the part of the
+architecture that makes that argument literally true rather than
+aspirational.
+
+------------------------------------------------------------------------
+
+This has a quieter benefit beyond crash safety. When the in-memory
+state and the on-disk state are the same thing, an external program — a
+different editor, a synchronization tool, a script written by someone
+who has never heard of PaperOS — can safely read or even modify a
+document while it happens to be open elsewhere, because there is no
+hidden internal state it could conflict with. Two eras of software,
+described throughout Part III, meeting peacefully around the same file
+is not just a nice image. It is a direct consequence of refusing to
+let any application build a private, unshareable model of what a
+document actually is.
+
+------------------------------------------------------------------------
+
+Where PaperOS genuinely needs richer structure than a plain open format
+naturally offers — the way a journal entry might need a date, or a
+task might need a status — that structure is added the way Open
+Formats already described: as a visible, human-readable extension
+sitting inside or alongside the format, never as a hidden binary layer
+bolted underneath it. The document a person can see is always the
+whole document. Nothing important is ever kept somewhere they cannot
+look.
+
+
+---
+
+Compatibility Layer
+
+Somewhere inside PaperOS, alongside the modern applications built
+specifically for it, a much older kind of software is meant to run
+without apology: a DOS-era word processor, a Turbo Pascal program, the
+exact tools discussed at length in Part III. None of that software was
+written with PaperOS’s philosophy in mind, and pretending it was would
+break the compatibility layer before it did anything useful. So it is
+not asked to.
+
+The compatibility layer runs legacy software inside its own contained
+environment — close enough to a small, purpose-built emulator that old
+programs believe they are running on the hardware and operating system
+they were originally written for, because in every way that matters to
+them, they are. That container is deliberately sealed off from the
+rest of PaperOS’s architecture. Legacy software never talks to the
+modern rendering layer, never touches the HAL directly, never learns
+anything about the system actually surrounding it. It talks to the one
+thing every era of this book’s history has always been willing to
+agree on: a file, sitting in a real, ordinary location, in a format a
+person can still open in twenty years even if the software that first
+wrote it cannot.
+
+------------------------------------------------------------------------
+
+This is why the compatibility layer belongs conceptually beside the
+main architecture rather than folded inside it, as the System
+Architecture chapter already noted. A DOS program that hangs, or that
+assumes memory constraints from 1985, should be contained by that
+boundary and unable to destabilize anything modern running next to it.
+But a document that program produces is not treated as a second-class
+citizen once it exists. It sits in the same document space as
+everything else, indexed the same way, searchable the same way,
+readable by modern tools the same way — because a WordStar file and a
+Markdown file, however differently they came into being, are both, in
+the end, just files.
+
+------------------------------------------------------------------------
+
+The deeper commitment underneath all of this is the one Part III kept
+returning to without saying it outright: software eras are not
+obligated to compete with each other. A person who still writes in
+WordStar because forty years of muscle memory refuses to let go of it
+should be able to do so on the same device where a book gets read and a
+modern note gets taken, without the machine treating one era as
+legitimate and the other as a museum exhibit kept behind glass.
+
+
+---
+
+Applications
+
+An application, inside PaperOS, is a small and specific promise: it
+knows how to do one thing with documents, and it agrees to stay inside
+that boundary. It does not reach into hardware directly — the HAL and
+rendering layer already stand between it and the screen. It does not
+invent its own private document format — the document architecture
+already insists otherwise. What is left, once those temptations are
+removed, is something closer to what an application was always meant
+to be before the word grew to mean an entire platform unto itself: a
+focused tool that opens a document, does something useful to it, and
+gets out of the way.
+
+This narrowness is a design requirement, not a limitation apologized
+for. Chapter 5 already argued that the system should organize itself
+around activities — reading, writing, drawing, retrocomputing — rather
+than around brand names competing for a launcher slot. Applications
+built this way make that argument literally enforceable: a reading
+application only needs to know how to read, and has no legitimate
+reason to ask for anything beyond the document it was handed and the
+small, well-defined surface the rendering layer offers it.
+
+------------------------------------------------------------------------
+
+That narrowness also does the quiet work the Ownership chapter
+promised. An application with no direct hardware access and no ability
+to invent its own storage has, by construction, very little room left
+to do the things that chapter ruled out entirely — watching what a
+person reads, phoning home with usage data, holding a document hostage
+inside a format only it understands. None of this requires a
+permissions dialog asking for trust after the fact. The architecture
+simply never hands out the capability in the first place.
+
+------------------------------------------------------------------------
+
+None of this prevents an application from being genuinely powerful
+within its own activity. A drawing tool can be as sophisticated as
+drawing requires. A programming environment can be as capable as
+programming requires, following the same lesson Turbo Pascal already
+taught this book about the value of a fast, immediate feedback loop.
+What an application in PaperOS never becomes is a destination competing
+for a person’s whole day. It remains what Chapter 3 already asked
+every part of this system to remain: a tool that disappears the moment
+the work it was built for is done.
+
+
+---
+
+The Computer That Waits
+
+Somewhere, right now, a notebook is sitting closed on a desk. Nobody is
+impatient with it. It is not blinking, not humming, not quietly
+consuming a battery to remind anyone it exists. It is simply present,
+the way a chair is present, or a window, waiting to be useful again
+without needing to announce that it is capable of it.
+
+This book has spent a great many pages trying to explain why that
+particular kind of presence is worth building a computer around. Not
+because computers should become less capable, and not because the
+extraordinary achievements of modern computing — the achievements
+Chapter 1 was careful to credit honestly — deserve anything less than
+admiration. Simply because somewhere among all of that capability,
+something quieter got lost, and it seemed worth the effort of trying
+to build it back.
+
+------------------------------------------------------------------------
+
+Every argument in this book eventually points back to the same small,
+stubborn claim. Documents should outlive the applications that create
+them, because a notebook has never needed permission from its
+manufacturer to be reopened a decade later. Formats should stay open,
+because a page has never needed anyone’s cooperation to be read.
+Hardware should be replaceable, because the philosophy was never about
+a chip. Habits, once learned, should be allowed to last, because trust
+has only ever been built the slow way, through years of a thing
+behaving exactly as it said it would. None of these are new ideas.
+Paper proved every one of them first, quietly, over roughly two
+thousand years, without ever writing a manifesto about it.
+
+------------------------------------------------------------------------
+
+What computing history, gathered in Part III of this book, adds to
+that claim is evidence rather than theory. An Apple II that believed
+its owner could learn to program it. A Commodore 64 that put
+creativity within reach of a household budget instead of an
+institution’s. A standard called MSX that proved openness could travel
+further than any single company ever could, even when the country
+writing most of the history books declined to notice. A Sinclair
+machine stripped down to almost nothing that still opened a door wide
+enough for an entire industry to walk through. A filesystem that told
+the truth about where files lived. A graphical interface that kept its
+promises consistently enough to become muscle memory. A machine ahead
+of its time that a company still managed to lose. An operating system
+rewritten in a portable language, given away to universities almost by
+accident, that outlived every business built on top of it. A word
+processor a novelist still trusts today, decades after everyone else
+moved on. A compiler fast enough to turn hesitation into curiosity.
+Ten different answers to the same underlying question, arrived at
+independently, in different decades, by people who mostly never met
+each other. That much agreement, across that much time, is not a
+coincidence worth dismissing.
+
+------------------------------------------------------------------------
+
+PaperOS does not claim to be the eleventh answer, better than the ten
+before it. It claims something smaller, and offers it honestly: an
+attempt to hold all ten lessons at once, inside one coherent piece of
+software, without losing any of them to the next redesign.
+
+A computer built this way will not compete for anyone’s attention,
+because it was never built to win that competition. It will not
+celebrate its own presence with sound or motion, because presence was
+never the achievement it was after. It will sit exactly where it was
+left, exactly as it was left, for as long as it takes someone to come
+back to it — a week, a year, the length of an entire unfinished
+manuscript — and when they do, it will still be there, unchanged,
+waiting the way paper has always waited.
+
+That is the computer this book set out to describe. Not the fastest
+one. Not the most capable one.
+
+The one that waits.
+
+
+---
+
+Bibliography
+
+This book was not written in isolation, and it does not claim to have
+arrived at any of its ideas first. The works below shaped the thinking
+behind it, directly or by giving an older name to something this book
+was already trying to say.
+
+On Calm Technology and Attention
+
+- Mark Weiser and John Seely Brown, “The Coming Age of Calm
+  Technology” (1996). The essay that gave this book’s central idea its
+  name, years before the hardware existed to build it properly.
+- Tim Wu, “The Attention Merchants: The Epic Scramble to Get Inside
+  Our Heads” (2016).
+- Cal Newport, “Digital Minimalism: Choosing a Focused Life in a Noisy
+  World” (2019).
+- Jenny Odell, “How to Do Nothing: Resisting the Attention Economy”
+  (2019).
+- Nicholas Carr, “The Shallows: What the Internet Is Doing to Our
+  Brains” (2010).
+
+On Unix and the Philosophy of Small Tools
+
+- Brian W. Kernighan and Rob Pike, “The Unix Programming Environment”
+  (1984).
+- Eric S. Raymond, “The Art of Unix Programming” (2003).
+- Peter H. Salus, “A Quarter Century of Unix” (1994).
+
+On Computing History
+
+- Steven Levy, “Hackers: Heroes of the Computer Revolution” (1984).
+- Michael Swaine and Paul Freiberger, “Fire in the Valley: The Making
+  of the Personal Computer” (1984; revised 2000).
+- Walter Isaacson, “The Innovators: How a Group of Hackers, Geniuses,
+  and Geeks Created the Digital Revolution” (2014).
+
+On Paper and Writing
+
+- Roland Allen, “The Notebook: A History of Thinking on Paper” (2023).
+
+
+---
+
+Glossary
+
+Calm Computing
+An approach to software design in which technology remains available
+without constantly demanding attention. Not to be confused with slow
+computing — calm computing does not ask hardware or software to be
+less capable, only less interruptive.
+
+Compatibility Layer
+The contained environment inside PaperOS where legacy software runs,
+sealed off from the modern rendering layer and HAL, communicating with
+the rest of the system only through ordinary documents.
+
+Documents Before Applications
+The principle that a document should be the first thing a person sees
+when returning to their work, with the application that opens it
+arriving only in service of it — not the other way around.
+
+HAL (Hardware Abstraction Layer)
+The lowest layer of PaperOS’s architecture, and the only part of the
+system permitted to know the specifics of the hardware it runs on.
+Everything above it depends on a small, stable vocabulary the HAL
+guarantees, regardless of the device underneath.
+
+Hardware Independence
+The design principle that PaperOS’s identity is philosophical rather
+than technological, and that the system must be able to move to new
+hardware without its ideas being rewritten along with it.
+
+Longevity
+The requirement that documents, interfaces and keyboard shortcuts
+remain usable and familiar for decades, treated as a non-negotiable
+constraint rather than an aspiration.
+
+Open Format
+A file format, such as Markdown, plain text, CSV, TOML, INI, EPUB or
+PDF, that is published, stable, and implementable by anyone without
+needing PaperOS’s permission or cooperation.
+
+Ownership
+The principle that a person’s documents, habits and data belong to
+them alone — measured concretely by their ability to close a notebook,
+walk away, and find everything exactly as it was left, without
+advertising, surveillance or a mandatory account standing in the way.
+
+Rendering
+The layer responsible for turning a description of content into
+pixels or ink on a specific display, kept deliberately ignorant of
+what that content means or why it is being shown.
