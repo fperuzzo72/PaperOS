@@ -1,4 +1,4 @@
-PaperOS Manifesto — Version 2.0
+PaperOS Manifesto — Version 2.1
 Distilled from the Founder’s Edition
 
 “PaperOS is not designed to help you use a computer. It is designed to
@@ -183,11 +183,6 @@ aspiration — the same non-negotiable standard a load-bearing wall is
 held to, because every other promise in this manifesto depends on it
 being kept.
 
-FREEDOM
-
-PaperOS respects its users. No advertising. No surveillance. No
-mandatory online services. The computer belongs to its user, always.
-
 ENGINEERING PHILOSOPHY
 
 Architecture must reflect philosophy. Applications never depend
@@ -200,11 +195,12 @@ treating the discipline as non-negotiable rather than convenient.
 
 THE FIRST STEP
 
-The first implementation targets the XTEInk X4. This choice is
-practical, not ideological, and the architecture is designed from the
-first commit to support additional platforms through clean
-abstraction layers. An implementation is temporary. The philosophy is
-permanent.
+Every implementation is temporary. The philosophy behind it is not.
+Building anything at all — one device, one operating system, imperfect
+and specific — is how a philosophy proves it was serious in the first
+place. PaperOS begins on the XTEInk X4 not because that choice is
+permanent, but because a philosophy that never ships anything is only
+ever a book.
 
 AN INVITATION
 

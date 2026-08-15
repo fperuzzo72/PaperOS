@@ -34,11 +34,10 @@ itself, to Amstrad for five million pounds. Amstrad — itself a British
 success story built on the same instinct toward aggressive, mass-market
 pricing that made the Commodore 64 possible in the United States —
 kept the Spectrum line alive for several more years afterward. It is
-its own story, arguably deserving its own chapter in a future edition
-of this book, but even in outline it completes the lesson Sinclair
-started: austerity, taken far enough, becomes its own kind of design
-philosophy, one more company was happy to keep manufacturing long
-after its original architect had moved on.
+its own story, told in full in the next chapter, but even in outline
+it completes the lesson Sinclair started: austerity, taken far enough,
+becomes its own kind of design philosophy, one more company was happy
+to keep manufacturing long after its original architect had moved on.
 
 ------------------------------------------------------------------------
 

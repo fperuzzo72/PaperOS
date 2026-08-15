@@ -1115,7 +1115,8 @@ single lesson, not because it was perfect — none of them were — but
 because each solved at least one problem with unusual elegance. The
 Apple II demonstrated curiosity. The Commodore 64 demonstrated
 accessible creativity. MSX demonstrated the power of an open platform.
-Sinclair demonstrated economy. MS-DOS demonstrated respect for files.
+Sinclair demonstrated economy. Amstrad demonstrated the reach of a
+complete, affordable bundle. MS-DOS demonstrated respect for files.
 Xerox PARC demonstrated that an idea can outlive the company that
 failed to sell it. The Macintosh demonstrated consistency. The Amiga
 demonstrated that sophistication need not become complexity. UNIX
@@ -1374,11 +1375,10 @@ itself, to Amstrad for five million pounds. Amstrad — itself a British
 success story built on the same instinct toward aggressive, mass-market
 pricing that made the Commodore 64 possible in the United States —
 kept the Spectrum line alive for several more years afterward. It is
-its own story, arguably deserving its own chapter in a future edition
-of this book, but even in outline it completes the lesson Sinclair
-started: austerity, taken far enough, becomes its own kind of design
-philosophy, one more company was happy to keep manufacturing long
-after its original architect had moved on.
+its own story, told in full in the next chapter, but even in outline
+it completes the lesson Sinclair started: austerity, taken far enough,
+becomes its own kind of design philosophy, one more company was happy
+to keep manufacturing long after its original architect had moved on.
 
 ------------------------------------------------------------------------
 
@@ -1389,6 +1389,102 @@ machine can be stripped down to almost nothing and still open a door
 that stays open for an entire generation. PaperOS inherits that
 discipline directly: economy is not what is left over after the real
 design work is done. It is design work.
+
+
+---
+
+Amstrad — Computers by the Bundle
+
+Alan Sugar built Amstrad on a single, blunt insight: most people did
+not want to assemble a computer. They wanted to buy one, plug it in,
+and use it, the same way they bought a stereo or a television. When
+Amstrad entered the home computer market in 1984 with the CPC 464, it
+did not sell a bare circuit board waiting for a separate monitor, tape
+deck and manuals from three different companies. It sold a complete
+package — computer, screen, and cassette or disk drive, one box, one
+price — at a moment when most of its competitors still expected a
+customer to assemble a working system out of parts bought separately.
+The CPC sold three million units over an unusually long eight-year
+production run, competing directly against the Commodore 64, the
+Sinclair Spectrum and the BBC Micro without ever being the most
+powerful machine among them.
+
+A year later, Sugar repeated the trick for an entirely different
+customer. The Amstrad PCW 8256, launched in 1985, bundled a computer,
+monitor and printer into a single dedicated word processor, priced at
+a little over three hundred pounds against machines like the Apple
+Macintosh selling for well over two thousand dollars. It was never
+meant to be a general-purpose computer. It was meant to replace a
+typewriter, completely, for a price a small business or a household
+could actually justify — and for years, in offices and homes across
+Britain, it did exactly that.
+
+------------------------------------------------------------------------
+
+The Sinclair chapter already told part of what happened next: in 1986,
+with Sinclair Research in financial trouble after the failure of the
+QL computer and the TV80 pocket television, Amstrad bought the rights
+to the Sinclair name and the ZX Spectrum outright, and kept the line
+alive for several more years afterward. It was a fittingly Amstrad
+move — buying an already-loved product at a distressed price and
+continuing to sell it, rather than trying to out-engineer it.
+
+------------------------------------------------------------------------
+
+There is a tempting but inaccurate story that connects Amstrad
+directly to ARM, the processor architecture that now runs inside the
+overwhelming majority of the world’s mobile phones. It is not true,
+and the real story is more interesting for being about a rival rather
+than a relative. ARM traces back to Acorn Computers, a different
+Cambridge-based company that spent the 1980s losing the retail battle
+Amstrad was busy winning. Acorn’s BBC Micro, built for the BBC’s
+Computer Literacy Project, became the machine an entire generation of
+British schoolchildren actually learned on — one and a half million
+units, overwhelmingly sold into classrooms rather than living rooms,
+at a moment when Amstrad’s cheaper, flashier machines were outselling
+Acorn everywhere else. In 1985, engineers Sophie Wilson and Steve
+Furber, working to give the aging BBC Micro more power, designed the
+Acorn RISC Machine — ARM — as a processor nobody outside Cambridge
+thought much about at the time. Acorn spun the design off as its own
+company in 1990. It now sits inside more devices than either Amstrad
+or Acorn ever sold as computers, combined.
+
+That lineage runs in a direct, traceable line to a machine built
+explicitly in the BBC Micro’s own spirit. In 2012, engineer Eben
+Upton — who had owned a BBC Micro as a child and wanted a new
+generation to have the same experience he did — released the
+Raspberry Pi, a complete computer the size of a credit card, built
+around an ARM processor and priced to sit on a school desk rather than
+in a boardroom. Acorn’s education mission, abandoned as a business
+decades earlier, effectively returned to classrooms wearing new
+silicon.
+
+The other lineage running through today’s small computers took a
+different path entirely, and it happens to be the one closer to home
+for this book. The ESP32 family of microcontrollers — including the
+ESP32-S3 chip inside the M5Stack Paper S3, one of PaperOS’s own named
+future targets — descends not from ARM at all, but from Xtensa, an
+entirely separate architecture developed by Tensilica. Two chips can
+sit a few centimeters apart inside two different pieces of e-ink
+hardware and trace their design back to two completely unrelated
+families, neither one owing the other anything. This is, in miniature,
+exactly why the Hardware Independence chapter insisted the HAL should
+never be allowed to care which family a given chip belongs to.
+Architectures multiply. The interface above them does not have to.
+
+------------------------------------------------------------------------
+
+Lesson for PaperOS
+
+Two answers came out of the same country, in the same decade, to the
+same underlying question, and neither was wrong. Amstrad proved that a
+complete, affordable bundle wins the living room. Acorn proved that a
+machine built for a classroom, funded by a broadcaster, can quietly
+seed the architecture the rest of the world ends up standing on
+decades later. PaperOS needs a version of both instincts: cheap enough
+to reach a bedroom desk, and serious enough about its own foundations
+to still matter after everyone has forgotten which device it first
+shipped on.
 
 
 ---
@@ -2428,28 +2524,31 @@ institution’s. A standard called MSX that proved openness could travel
 further than any single company ever could, even when the country
 writing most of the history books declined to notice. A Sinclair
 machine stripped down to almost nothing that still opened a door wide
-enough for an entire industry to walk through. A filesystem that told
-the truth about where files lived. A research lab that invented the
-desktop before anyone knew to want one, and shipped almost none of it
-itself. A graphical interface that kept its promises consistently
-enough to become muscle memory. A machine ahead of its time that a
-company still managed to lose. An operating system rewritten in a
-portable language, given away to universities almost by accident, that
-outlived every business built on top of it. A word processor a
-novelist still trusts today, decades after everyone else moved on. A
-compiler fast enough to turn hesitation into curiosity. A handheld
-that succeeded by asking less of handwriting recognition, not more. A
-display technology patient enough to finally stop asking to be called
-a screen. Thirteen different answers to the same underlying question,
+enough for an entire industry to walk through. A complete, affordable
+bundle that won a living room while a rival’s classroom machine
+quietly seeded the chip now running in almost everyone’s pocket. A
+filesystem that told the truth about where files lived. A research lab
+that invented the desktop before anyone knew to want one, and shipped
+almost none of it itself. A graphical interface that kept its promises
+consistently enough to become muscle memory. A machine ahead of its
+time that a company still managed to lose. An operating system
+rewritten in a portable language, given away to universities almost by
+accident, that outlived every business built on top of it. A word
+processor a novelist still trusts today, decades after everyone else
+moved on. A compiler fast enough to turn hesitation into curiosity. A
+handheld that succeeded by asking less of handwriting recognition, not
+more. A display technology patient enough to finally stop asking to be
+called a screen. Fourteen different answers to the same underlying
+question,
 arrived at independently, across different decades, by people who
 mostly never met each other. That much agreement, across that much
 time, is not a coincidence worth dismissing.
 
 ------------------------------------------------------------------------
 
-PaperOS does not claim to be the fourteenth answer, better than the
-thirteen before it. It claims something smaller, and offers it
-honestly: an attempt to hold all thirteen lessons at once, inside one
+PaperOS does not claim to be the fifteenth answer, better than the
+fourteen before it. It claims something smaller, and offers it
+honestly: an attempt to hold all fourteen lessons at once, inside one
 coherent piece of software, without losing any of them to the next
 redesign.
 

@@ -22,6 +22,7 @@ Part III — Learning from Computing History
 - Commodore 64 — Creativity at Scale
 - MSX — A Standard Without a Flag
 - Sinclair — The Discipline of Less
+- Amstrad — Computers by the Bundle
 - MS-DOS — Respect for Files
 - Xerox PARC — The Future, Shipped by Someone Else
 - Macintosh — Consistency as a Promise
@@ -49,6 +50,6 @@ Part V — The Future
 - Bibliography
 - Glossary
 
-All five parts, front matter and back matter are now written. See
-NEXT_STEPS.md for the current editorial roadmap — a general review
-pass across the whole book is next.
+All five parts, front matter and back matter are now written, plus
+the suggested Amstrad chapter. See NEXT_STEPS.md for the current
+editorial roadmap.

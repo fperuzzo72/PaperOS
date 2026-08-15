@@ -19,9 +19,17 @@ Immediate priorities
    - UNIX ✓
    - WordStar ✓
    - Turbo Pascal ✓
-   - Amstrad (not originally planned — suggested addition, still open;
-     the Sinclair chapter references the 1986 acquisition and flags
-     Amstrad as deserving its own chapter)
+   - Amstrad ✓ — placed right after Sinclair, continuing the 1986
+     acquisition story directly. Also corrects a common misconception:
+     Amstrad has no relationship to ARM. ARM traces to Acorn Computers
+     (BBC Micro, the UK schools' Computer Literacy Project machine), a
+     rival Amstrad was busy beating in the retail market at the same
+     time. The chapter follows that thread forward to the Raspberry Pi
+     (ARM, explicitly built in the BBC Micro's spirit) and sideways to
+     the ESP32 (Xtensa, not ARM — the chip inside the M5Stack Paper S3,
+     one of PaperOS's own named future targets), tying straight back
+     into the Hardware Independence chapter's point about the HAL not
+     caring which chip family it runs on.
 
    Three further additions, suggested in the previous pass, are now
    written and placed for narrative impact rather than tacked onto the
@@ -104,9 +112,21 @@ Immediate priorities
 
    All five Parts, plus front and back matter, are now written.
 
-8. Not yet started:
-   - General review pass across the whole book plus the new Manifesto
-     (planned next, per the author).
+8. General review pass: in progress.
+   - Chapter 7's introduction and the Apple II sub-chapter had been
+     missed by the original prose rewrite and were still in the
+     one-sentence-per-paragraph style — fixed.
+   - Quotes, repeated-word typos, and every "Chapter N" cross-reference
+     checked across all chapters — clean.
+   - MANIFESTO.md reviewed and bumped to v2.1, now a complete first
+     version. Found and fixed two real duplications carried over from
+     the original v1.0 structure: a standalone FREEDOM section that
+     repeated OWNERSHIP almost verbatim (removed, since OWNERSHIP
+     already covers it), and THE FIRST STEP repeating HARDWARE
+     INDEPENDENCE's XTEInk X4 justification word for word (rewritten
+     to make a different point — that shipping something concrete is
+     how a philosophy proves it was serious — instead of repeating the
+     hardware rationale).
    - Chapter numbering pass (see item 2) is still open.
 
 9. Publish Founder's Edition v1.0
