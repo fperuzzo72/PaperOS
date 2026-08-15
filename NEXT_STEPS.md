@@ -72,12 +72,28 @@ Immediate priorities
    the full book rather than standing alone. Intended as a first draft
    ahead of a general review pass across the whole project.
 
-6. Not yet started:
+6. Reconcile docs/architecture.md with Part IV: done ✓ — bumped to v0.2.
+   - Fixed the layer stack: it previously read Applications → System
+     Services → User Interface → HAL → Platform Drivers → Hardware,
+     which didn't match the book (and put UI in an odd place, below
+     System Services). Now reads Applications → Document Model →
+     Rendering → HAL → Platform Drivers → Hardware, matching Part IV
+     exactly, with HAL as the stable interface and Platform Drivers as
+     the concrete per-device implementations beneath it.
+   - Rendering is now named as its own layer (previously only implied
+     under "User Interface").
+   - Compatibility subsystem reframed as sitting beside the stack, not
+     nested inside System Services, matching the Compatibility Layer
+     chapter's "sits slightly apart, deliberately."
+   - Both docs/architecture.md and docs/design.md now point back to
+     the relevant Founder's Edition chapters at the top ("this
+     document states the how, the book states the why"), so the two
+     registers stay explicitly linked instead of silently drifting
+     apart again.
+
+7. Not yet started:
    - Part V (The Community, Roadmap, Why PaperOS Matters)
-   - Part IV's more technical companion, docs/architecture.md, has not
-     been reconciled with the new Part IV chapters — worth a pass to
-     make sure the two don't contradict each other now that both exist.
    - General review pass across Parts I-IV plus the new Manifesto
      (planned next, per the author).
 
-7. Publish Founder's Edition v1.0
+8. Publish Founder's Edition v1.0

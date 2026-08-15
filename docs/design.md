@@ -1,5 +1,9 @@
 PaperOS Design Notes v0.1
 
+See the Founder’s Edition (FoundersEdition/src/), particularly Chapters
+3-6 and the Ownership chapter, for the reasoning behind these notes.
+This document states the how. The book states the why.
+
 Design principles
 
 -   Keyboard-first interaction
