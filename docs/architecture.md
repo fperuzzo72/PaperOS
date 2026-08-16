@@ -1,7 +1,7 @@
 PaperOS Architecture v0.2
 
-See FoundersEdition/src/26-SystemArchitecture.md through
-31-Applications.md (Part IV — Architecture) for the reasoning behind
+See FoundersEdition/src/28-SystemArchitecture.md through
+33-Applications.md (Part IV — Architecture) for the reasoning behind
 every decision below. This document states the how. The book states
 the why.
 

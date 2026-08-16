@@ -1,6 +1,6 @@
 PaperOS Roadmap v0.1
 
-See FoundersEdition/src/33-Roadmap.md (Part V) for why this list is
+See FoundersEdition/src/35-Roadmap.md (Part V) for why this list is
 ordered the way it is. This document states the how. The book states
 the why.
 
